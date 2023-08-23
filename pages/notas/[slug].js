@@ -29,7 +29,7 @@ export default function Nota({nota, backendUrl}) {
                 <h5>
                     <Image
                         className='inline rounded-full me-2 object-cover w-6 h-6'
-                        src={backendUrl+nota.autor.data.attributes.Foto.data[0].attributes.url} 
+                        src={backendUrl+nota.autor.data.attributes.Foto.data.attributes.url} 
                         alt={nota.autor.data.attributes.Nombre}
                         width={36}
                         height={36}
@@ -40,12 +40,12 @@ export default function Nota({nota, backendUrl}) {
                 <div className='mx-auto mt-5 w-auto text-center'>
                     <Image
                         className='mx-auto'
-                        src={backendUrl+nota.ImagenDestacada.data[0].attributes.url} 
+                        src={backendUrl+nota.ImagenDestacada.data.attributes.url} 
                         alt={nota.Titulo}
-                        width={nota.ImagenDestacada.data[0].attributes.width}
-                        height={nota.ImagenDestacada.data[0].attributes.height}
+                        width={nota.ImagenDestacada.data.attributes.width}
+                        height={nota.ImagenDestacada.data.attributes.height}
                     />
-                    <span className='text-sm'>{nota.ImagenDestacada.data[0].attributes.caption}</span>
+                    <span className='text-sm'>{nota.ImagenDestacada.data.attributes.caption}</span>
                 </div>
 
                 <div className='content my-6 font-martel text-lg leading-10 text-justify'>

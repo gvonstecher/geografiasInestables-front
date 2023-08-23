@@ -145,13 +145,15 @@ const GET_PODCASTS_SLUGS = gql`
       }
   }`;
 
+
 const GET_PODCAST = gql`
-  query getPodcast($slug: String!) {
+  query getPodcast($slug: String!) {  
     podcasts(filters: {slug: {eq: $slug}}) {
       data {
+        id
         attributes{
           Titulo
-          Descripcion
+          Cuerpo
           Duracion
           slug
           Link

@@ -63,6 +63,7 @@ const NavMenu = ({section}) => {
         setError('Error fetching data. Please try again later.');
         setLoading(false);
       });
+      // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   if (loading) {

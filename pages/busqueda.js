@@ -101,6 +101,7 @@ export default function Search({backendUrl, onLoadPlayer}) {
     } else {
       setResults([]); // Si no hay consulta, limpia los resultados
     }
+	// eslint-disable-next-line react-hooks/exhaustive-deps
   }, [query, filter]);
 
 

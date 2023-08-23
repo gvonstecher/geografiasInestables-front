@@ -30,7 +30,7 @@ export default function Podcast({podcast, backendUrl, onLoadPlayer}) {
                 <h5>
                     <Image
                         className='inline rounded-full me-2 object-cover w-6 h-6'
-                        src={backendUrl+podcast.autor.data.attributes.Foto.data[0].attributes.url} 
+                        src={backendUrl+podcast.autor.data.attributes.Foto.data.attributes.url} 
                         alt={podcast.autor.data.attributes.Nombre}
                         width={36}
                         height={36}
@@ -41,12 +41,12 @@ export default function Podcast({podcast, backendUrl, onLoadPlayer}) {
                 <div className='mx-auto mt-5 w-auto text-center'>
                     <Image
                         className='mx-auto'
-                        src={backendUrl+podcast.ImagenDestacada.data[0].attributes.url} 
+                        src={backendUrl+podcast.ImagenDestacada.data.attributes.url} 
                         alt={podcast.Titulo}
-                        width={podcast.ImagenDestacada.data[0].attributes.width}
-                        height={podcast.ImagenDestacada.data[0].attributes.height}
+                        width={podcast.ImagenDestacada.data.attributes.width}
+                        height={podcast.ImagenDestacada.data.attributes.height}
                     />
-                    <span className='text-sm'>{podcast.ImagenDestacada.data[0].attributes.caption}</span>
+                    <span className='text-sm'>{podcast.ImagenDestacada.data.attributes.caption}</span>
                 </div>
 
                 <div className='content my-6 font-martel text-lg leading-10 text-justify'>
