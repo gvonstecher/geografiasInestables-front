@@ -31,7 +31,7 @@ export default function Notas({titulo,notas, backendUrl}) {
 								categoria={nota.attributes.categoria_nota}
 								descripcionCorta={nota.attributes.DescripcionCorta}
                                 cuerpo={nota.attributes.Cuerpo}
-								imagenDestacada={nota.attributes.ImagenDestacada.data[0].attributes.url}
+								imagenDestacada={nota.attributes.ImagenDestacada.data.attributes.url}
 								backendUrl={backendUrl} 
                             />
                         )

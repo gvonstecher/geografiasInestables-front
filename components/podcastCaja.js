@@ -10,7 +10,7 @@ export default function PodcastCaja({ podcast, backendUrl, onLoadPlayer}) {
 								<Link href={'podcasts/'+podcast.attributes.slug}>
 									<Image 
 										className='object-cover h-60 w-full rounded-t-lg' 
-										src={backendUrl+podcast.attributes.ImagenDestacada.data[0].attributes.url}
+										src={backendUrl+podcast.attributes.ImagenDestacada.data.attributes.url}
 										width={400}
 										height={250} 
 										alt={podcast.attributes.Titulo}

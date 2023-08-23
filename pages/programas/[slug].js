@@ -31,7 +31,7 @@ export default function Notas({titulo,podcasts, backendUrl,onLoadPlayer}) {
 								descripcionCorta={podcast.attributes.DescripcionCorta}
 								duracion={podcast.attributes.Duracion}
 								link={podcast.attributes.Link}
-								imagenDestacada={podcast.attributes.ImagenDestacada.data[0].attributes.url}
+								imagenDestacada={podcast.attributes.ImagenDestacada.data.attributes.url}
 								backendUrl={backendUrl} 
 								onLoadPlayer={onLoadPlayer} 
                             />

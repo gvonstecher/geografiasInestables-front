@@ -32,7 +32,7 @@ export default function AcercaDe({acercaDe, autores,backendUrl}) {
                                         nombre={autor.attributes.Nombre}
                                         slug={autor.attributes.slug}
                                         descripcion={autor.attributes.Descripcion}
-                                        foto={autor.attributes.Foto.data[0].attributes.url}
+                                        foto={autor.attributes.Foto.data.attributes.url}
                                         backendUrl={backendUrl} 
                                     />
                                 </>

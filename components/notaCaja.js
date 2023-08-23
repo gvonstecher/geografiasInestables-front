@@ -9,7 +9,7 @@ export default function NotaCaja({ nota, backendUrl }) {
 								<Link href={'notas/'+nota.attributes.slug}>
 									<Image 
 										className='object-cover h-60 w-full rounded-t-lg' 
-										src={backendUrl+nota.attributes.ImagenDestacada.data[0].attributes.url}
+										src={backendUrl+nota.attributes.ImagenDestacada.data.attributes.url}
 										width={400}
 										height={250} 
 										alt={nota.attributes.Titulo}

@@ -27,7 +27,7 @@ export default function Home({notas,podcasts,backendUrl,onLoadPlayer}) {
 								categoria={nota.attributes.categoria_nota}
 								descripcionCorta={nota.attributes.DescripcionCorta}
 								cuerpo={nota.attributes.Cuerpo}
-								imagenDestacada={nota.attributes.ImagenDestacada.data[0].attributes.url}
+								imagenDestacada={nota.attributes.ImagenDestacada.data.attributes.url}
 								backendUrl={backendUrl} 
 							/>
 						)
@@ -51,7 +51,7 @@ export default function Home({notas,podcasts,backendUrl,onLoadPlayer}) {
 								descripcionCorta={podcast.attributes.DescripcionCorta}
 								duracion={podcast.attributes.Duracion}
 								link={podcast.attributes.Link}
-								imagenDestacada={podcast.attributes.ImagenDestacada.data[0].attributes.url}
+								imagenDestacada={podcast.attributes.ImagenDestacada.data.attributes.url}
 								backendUrl={backendUrl} 
 								onLoadPlayer={onLoadPlayer}
 							/>
