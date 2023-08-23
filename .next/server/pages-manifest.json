@@ -1,0 +1,17 @@
+{
+  "/_error": "pages/_error.js",
+  "/_document": "pages/_document.js",
+  "/api/hello": "pages/api/hello.js",
+  "/_app": "pages/_app.js",
+  "/acerca-de": "pages/acerca-de.js",
+  "/musica": "pages/musica.js",
+  "/": "pages/index.js",
+  "/busqueda": "pages/busqueda.js",
+  "/notas/[slug]": "pages/notas/[slug].js",
+  "/politicas-de-privacidad": "pages/politicas-de-privacidad.js",
+  "/podcasts/[slug]": "pages/podcasts/[slug].js",
+  "/programas/[slug]": "pages/programas/[slug].js",
+  "/terminos-y-condiciones": "pages/terminos-y-condiciones.js",
+  "/secciones/[slug]": "pages/secciones/[slug].js",
+  "/404": "pages/404.html"
+}
