@@ -102,6 +102,7 @@ const client = new _apollo_client__WEBPACK_IMPORTED_MODULE_5__.ApolloClient({
 });
 const backendUrl = process.env.STRAPIBASEURL;
 function Podcast({ podcast , backendUrl , onLoadPlayer  }) {
+    console.log(typeof podcast.categoria_podcast);
     return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
         children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_Layout__WEBPACK_IMPORTED_MODULE_7__/* ["default"] */ .Z, {
             children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("article", {
@@ -157,7 +158,9 @@ function Podcast({ podcast , backendUrl , onLoadPlayer  }) {
                     }),
                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
                         className: "content my-6 font-martel text-lg leading-10 text-justify",
-                        children: podcast.Descripcion
+                        dangerouslySetInnerHTML: {
+                            __html: podcast.Descripcion
+                        }
                     }),
                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_PlayerButtonLg__WEBPACK_IMPORTED_MODULE_9__/* ["default"] */ .Z, {
                         duracion: podcast.Duracion,
@@ -248,7 +251,8 @@ async function getStaticProps({ params  }) {
         props: {
             podcast: data.podcasts.data[0].attributes,
             backendUrl: backendUrl
-        }
+        },
+        revalidate: 60
     };
 }
 

@@ -72,6 +72,7 @@ export async function getStaticProps({ params }){
             titulo: data.categoriaPodcasts.data[0].attributes.Titulo,
             podcasts: data.categoriaPodcasts.data[0].attributes.podcasts.data,
             backendUrl: backendUrl
-        }
+        },
+        revalidate: 60,
     }
 }

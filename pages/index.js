@@ -69,7 +69,7 @@ export default function Home({notas,podcasts,backendUrl,onLoadPlayer}) {
 }
 
 
-export async function getStaticProps(){ 
+export async function getServerSideProps(){ 
   const client = new ApolloClient({
     uri: apiUrl,
     cache: new InMemoryCache()

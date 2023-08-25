@@ -71,6 +71,7 @@ export async function getStaticProps({ params }){
             titulo: data.categoriaNotas.data[0].attributes.Titulo,
             notas: data.categoriaNotas.data[0].attributes.notas.data,
             backendUrl: backendUrl
-        }
+        },
+        revalidate: 60
     }
 }

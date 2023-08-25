@@ -1,0 +1,113 @@
+{
+  "polyfillFiles": [
+    "static/chunks/polyfills-c67a75d1b6f99dc8.js"
+  ],
+  "devFiles": [],
+  "ampDevFiles": [],
+  "lowPriorityFiles": [
+    "static/1vG5bmccG4NabfgDiu7BB/_buildManifest.js",
+    "static/1vG5bmccG4NabfgDiu7BB/_ssgManifest.js"
+  ],
+  "rootMainFiles": [],
+  "pages": {
+    "/": [
+      "static/chunks/webpack-59c5c889f52620d6.js",
+      "static/chunks/framework-2c79e2a64abdb08b.js",
+      "static/chunks/main-9c8fd354a6242c23.js",
+      "static/chunks/103-cfae5587b11b5390.js",
+      "static/chunks/16-80cc7b617cfa06e1.js",
+      "static/chunks/pages/index-ee1cc1c9d663f455.js"
+    ],
+    "/_app": [
+      "static/chunks/webpack-59c5c889f52620d6.js",
+      "static/chunks/framework-2c79e2a64abdb08b.js",
+      "static/chunks/main-9c8fd354a6242c23.js",
+      "static/css/fc4111bc7f6181ae.css",
+      "static/chunks/pages/_app-6f89e49fd0f56760.js"
+    ],
+    "/_error": [
+      "static/chunks/webpack-59c5c889f52620d6.js",
+      "static/chunks/framework-2c79e2a64abdb08b.js",
+      "static/chunks/main-9c8fd354a6242c23.js",
+      "static/chunks/pages/_error-54de1933a164a1ff.js"
+    ],
+    "/acerca-de": [
+      "static/chunks/webpack-59c5c889f52620d6.js",
+      "static/chunks/framework-2c79e2a64abdb08b.js",
+      "static/chunks/main-9c8fd354a6242c23.js",
+      "static/chunks/103-cfae5587b11b5390.js",
+      "static/chunks/16-80cc7b617cfa06e1.js",
+      "static/chunks/pages/acerca-de-3a8ecc5075de1860.js"
+    ],
+    "/busqueda": [
+      "static/chunks/webpack-59c5c889f52620d6.js",
+      "static/chunks/framework-2c79e2a64abdb08b.js",
+      "static/chunks/main-9c8fd354a6242c23.js",
+      "static/chunks/103-cfae5587b11b5390.js",
+      "static/chunks/229-0305253a5124dad5.js",
+      "static/chunks/16-80cc7b617cfa06e1.js",
+      "static/chunks/pages/busqueda-a1bf9ceed72111e1.js"
+    ],
+    "/musica": [
+      "static/chunks/webpack-59c5c889f52620d6.js",
+      "static/chunks/framework-2c79e2a64abdb08b.js",
+      "static/chunks/main-9c8fd354a6242c23.js",
+      "static/chunks/103-cfae5587b11b5390.js",
+      "static/chunks/16-80cc7b617cfa06e1.js",
+      "static/chunks/pages/musica-0a6222da65adebb5.js"
+    ],
+    "/notas/[slug]": [
+      "static/chunks/webpack-59c5c889f52620d6.js",
+      "static/chunks/framework-2c79e2a64abdb08b.js",
+      "static/chunks/main-9c8fd354a6242c23.js",
+      "static/chunks/103-cfae5587b11b5390.js",
+      "static/chunks/480-034b01f2248ab24d.js",
+      "static/chunks/16-80cc7b617cfa06e1.js",
+      "static/chunks/pages/notas/[slug]-6730d4173817a3e2.js"
+    ],
+    "/podcasts/[slug]": [
+      "static/chunks/webpack-59c5c889f52620d6.js",
+      "static/chunks/framework-2c79e2a64abdb08b.js",
+      "static/chunks/main-9c8fd354a6242c23.js",
+      "static/chunks/103-cfae5587b11b5390.js",
+      "static/chunks/480-034b01f2248ab24d.js",
+      "static/chunks/16-80cc7b617cfa06e1.js",
+      "static/chunks/pages/podcasts/[slug]-0641d48f1c6b8ca3.js"
+    ],
+    "/politicas-de-privacidad": [
+      "static/chunks/webpack-59c5c889f52620d6.js",
+      "static/chunks/framework-2c79e2a64abdb08b.js",
+      "static/chunks/main-9c8fd354a6242c23.js",
+      "static/chunks/103-cfae5587b11b5390.js",
+      "static/chunks/613-e570a6104d31dfc7.js",
+      "static/chunks/16-80cc7b617cfa06e1.js",
+      "static/chunks/pages/politicas-de-privacidad-60f31b7f97c72b8a.js"
+    ],
+    "/programas/[slug]": [
+      "static/chunks/webpack-59c5c889f52620d6.js",
+      "static/chunks/framework-2c79e2a64abdb08b.js",
+      "static/chunks/main-9c8fd354a6242c23.js",
+      "static/chunks/103-cfae5587b11b5390.js",
+      "static/chunks/16-80cc7b617cfa06e1.js",
+      "static/chunks/pages/programas/[slug]-30ed26c4cbc17012.js"
+    ],
+    "/secciones/[slug]": [
+      "static/chunks/webpack-59c5c889f52620d6.js",
+      "static/chunks/framework-2c79e2a64abdb08b.js",
+      "static/chunks/main-9c8fd354a6242c23.js",
+      "static/chunks/103-cfae5587b11b5390.js",
+      "static/chunks/16-80cc7b617cfa06e1.js",
+      "static/chunks/pages/secciones/[slug]-0ad3886d364c0e9d.js"
+    ],
+    "/terminos-y-condiciones": [
+      "static/chunks/webpack-59c5c889f52620d6.js",
+      "static/chunks/framework-2c79e2a64abdb08b.js",
+      "static/chunks/main-9c8fd354a6242c23.js",
+      "static/chunks/103-cfae5587b11b5390.js",
+      "static/chunks/613-e570a6104d31dfc7.js",
+      "static/chunks/16-80cc7b617cfa06e1.js",
+      "static/chunks/pages/terminos-y-condiciones-b447df3c2f1a72f0.js"
+    ]
+  },
+  "ampFirstPages": []
+}

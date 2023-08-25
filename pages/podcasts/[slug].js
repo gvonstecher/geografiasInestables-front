@@ -18,6 +18,7 @@ const client = new ApolloClient({
 const backendUrl = process.env.STRAPIBASEURL;
 
 export default function Podcast({podcast, backendUrl, onLoadPlayer}) {
+    console.log(typeof podcast.categoria_podcast);
   return (
     <>
         <Layout>
@@ -49,8 +50,9 @@ export default function Podcast({podcast, backendUrl, onLoadPlayer}) {
                     <span className='text-sm'>{podcast.ImagenDestacada.data.attributes.caption}</span>
                 </div>
 
-                <div className='content my-6 font-martel text-lg leading-10 text-justify'>
-                    {podcast.Descripcion}
+                <div className='content my-6 font-martel text-lg leading-10 text-justify'
+                    dangerouslySetInnerHTML={{ __html: podcast.Descripcion }}
+                >
                 </div>
 
                 <PlayerButtonLg duracion={podcast.Duracion} onClick={() =>onLoadPlayer(podcast.Link)} />
@@ -117,6 +119,7 @@ export async function getStaticProps({ params }){
         props: {
             podcast: data.podcasts.data[0].attributes,
             backendUrl: backendUrl
-        }
+        },
+        revalidate: 60,
     }
 }

@@ -105,7 +105,7 @@ function Nota({ nota , backendUrl  }) {
             children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("article", {
                 className: " bg-white rounded-lg px-20 py-12 drop-shadow-md",
                 children: [
-                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_3___default()), {
+                    (nota.categoria_nota.data != null) ?? /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_3___default()), {
                         href: "/secciones/" + nota.categoria_nota.data.attributes.slug,
                         children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("h3", {
                             className: "uppercase text-light-green font-medium mb-2 font-work",
@@ -155,7 +155,9 @@ function Nota({ nota , backendUrl  }) {
                     }),
                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
                         className: "content my-6 font-martel text-lg leading-10 text-justify",
-                        children: nota.Cuerpo
+                        dangerouslySetInnerHTML: {
+                            __html: nota.Cuerpo
+                        }
                     }),
                     /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
                         id: "metaData",
@@ -242,7 +244,8 @@ async function getStaticProps({ params  }) {
         props: {
             nota: data.notas.data[0].attributes,
             backendUrl: backendUrl
-        }
+        },
+        revalidate: 1
     };
 }
 

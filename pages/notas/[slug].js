@@ -21,9 +21,11 @@ export default function Nota({nota, backendUrl}) {
     <>
         <Layout>
             <article className=" bg-white rounded-lg px-20 py-12 drop-shadow-md">
-                <Link href={'/secciones/'+nota.categoria_nota.data.attributes.slug}>
-					<h3 className='uppercase text-light-green font-medium mb-2 font-work'>{nota.categoria_nota.data.attributes.Titulo}</h3>
-				</Link>
+                {nota.categoria_nota.data != null ??
+                    <Link href={'/secciones/'+nota.categoria_nota.data.attributes.slug}>
+					    <h3 className='uppercase text-light-green font-medium mb-2 font-work'>{nota.categoria_nota.data.attributes.Titulo}</h3>
+				    </Link>
+                }
                 <h2 className='font-oldStandard text-4xl mb-2'>{nota.Titulo}</h2>
                 <h4 className='mb-1'> <Date dateString={nota.updatedAt} /></h4>
                 <h5>
@@ -48,8 +50,9 @@ export default function Nota({nota, backendUrl}) {
                     <span className='text-sm'>{nota.ImagenDestacada.data.attributes.caption}</span>
                 </div>
 
-                <div className='content my-6 font-martel text-lg leading-10 text-justify'>
-                    {nota.Cuerpo}
+                <div className='content my-6 font-martel text-lg leading-10 text-justify'
+                    dangerouslySetInnerHTML={{ __html: nota.Cuerpo }}
+                >
                 </div>
 
                 <div id='metaData' className='border-b border-light-green flex justify-between py-1'>
@@ -114,6 +117,7 @@ export async function getStaticProps({ params }){
         props: {
             nota: data.notas.data[0].attributes,
             backendUrl: backendUrl
-        }
+        },
+        revalidate: 1,
     }
 }

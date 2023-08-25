@@ -5,8 +5,8 @@
   "devFiles": [],
   "ampDevFiles": [],
   "lowPriorityFiles": [
-    "static/x0Ovqv0DmWa7CIguHo5tM/_buildManifest.js",
-    "static/x0Ovqv0DmWa7CIguHo5tM/_ssgManifest.js"
+    "static/QGD1z3qvPcHZiGNPV8gME/_buildManifest.js",
+    "static/QGD1z3qvPcHZiGNPV8gME/_ssgManifest.js"
   ],
   "rootMainFiles": [],
   "pages": {
@@ -16,7 +16,7 @@
       "static/chunks/main-9c8fd354a6242c23.js",
       "static/chunks/103-cfae5587b11b5390.js",
       "static/chunks/16-80cc7b617cfa06e1.js",
-      "static/chunks/pages/index-ab203d135fc4a685.js"
+      "static/chunks/pages/index-ee1cc1c9d663f455.js"
     ],
     "/_app": [
       "static/chunks/webpack-59c5c889f52620d6.js",
@@ -63,7 +63,7 @@
       "static/chunks/103-cfae5587b11b5390.js",
       "static/chunks/480-034b01f2248ab24d.js",
       "static/chunks/16-80cc7b617cfa06e1.js",
-      "static/chunks/pages/notas/[slug]-560334b6d6a6b51d.js"
+      "static/chunks/pages/notas/[slug]-83a0381cc4adeafb.js"
     ],
     "/podcasts/[slug]": [
       "static/chunks/webpack-59c5c889f52620d6.js",
@@ -72,7 +72,7 @@
       "static/chunks/103-cfae5587b11b5390.js",
       "static/chunks/480-034b01f2248ab24d.js",
       "static/chunks/16-80cc7b617cfa06e1.js",
-      "static/chunks/pages/podcasts/[slug]-80751dbcc4a88cf5.js"
+      "static/chunks/pages/podcasts/[slug]-5c4e4cfbf27dcd5e.js"
     ],
     "/politicas-de-privacidad": [
       "static/chunks/webpack-59c5c889f52620d6.js",
