@@ -1,23 +1,23 @@
 "use strict";
 (() => {
 var exports = {};
-exports.id = 34;
-exports.ids = [34];
+exports.id = 627;
+exports.ids = [627];
 exports.modules = {
 
-/***/ 8420:
+/***/ 3066:
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* reexport safe */ private_next_pages_notas_slug_js__WEBPACK_IMPORTED_MODULE_0__.ZP),
-/* harmony export */   "getStaticPaths": () => (/* reexport safe */ private_next_pages_notas_slug_js__WEBPACK_IMPORTED_MODULE_0__.Fe),
-/* harmony export */   "getStaticProps": () => (/* reexport safe */ private_next_pages_notas_slug_js__WEBPACK_IMPORTED_MODULE_0__.b1)
+/* harmony export */   "default": () => (/* reexport safe */ private_next_pages_podcasts_slug_js__WEBPACK_IMPORTED_MODULE_0__.ZP),
+/* harmony export */   "getStaticPaths": () => (/* reexport safe */ private_next_pages_podcasts_slug_js__WEBPACK_IMPORTED_MODULE_0__.Fe),
+/* harmony export */   "getStaticProps": () => (/* reexport safe */ private_next_pages_podcasts_slug_js__WEBPACK_IMPORTED_MODULE_0__.b1)
 /* harmony export */ });
-/* harmony import */ var private_next_pages_notas_slug_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2600);
-var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([private_next_pages_notas_slug_js__WEBPACK_IMPORTED_MODULE_0__]);
-private_next_pages_notas_slug_js__WEBPACK_IMPORTED_MODULE_0__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];
+/* harmony import */ var private_next_pages_podcasts_slug_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7248);
+var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([private_next_pages_podcasts_slug_js__WEBPACK_IMPORTED_MODULE_0__]);
+private_next_pages_podcasts_slug_js__WEBPACK_IMPORTED_MODULE_0__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];
 
         // Next.js Route Loader
         
@@ -60,13 +60,13 @@ function Date_Date({ dateString  }) {
 
 /***/ }),
 
-/***/ 2600:
+/***/ 7248:
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "Fe": () => (/* binding */ getStaticPaths),
-/* harmony export */   "ZP": () => (/* binding */ Nota),
+/* harmony export */   "ZP": () => (/* binding */ Podcast),
 /* harmony export */   "b1": () => (/* binding */ getStaticProps)
 /* harmony export */ });
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5893);
@@ -83,8 +83,10 @@ __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __we
 /* harmony import */ var _graphql_queries__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(2838);
 /* harmony import */ var _components_Layout__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(7345);
 /* harmony import */ var _components_Date__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(6167);
+/* harmony import */ var _components_PlayerButtonLg__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(2130);
 var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_components_Layout__WEBPACK_IMPORTED_MODULE_7__]);
 _components_Layout__WEBPACK_IMPORTED_MODULE_7__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];
+
 
 
 
@@ -99,30 +101,30 @@ const client = new _apollo_client__WEBPACK_IMPORTED_MODULE_5__.ApolloClient({
     cache: new _apollo_client__WEBPACK_IMPORTED_MODULE_5__.InMemoryCache()
 });
 const backendUrl = process.env.STRAPIBASEURL;
-function Nota({ nota , backendUrl  }) {
-    console.log(nota);
+function Podcast({ podcast , backendUrl , onLoadPlayer  }) {
+    console.log(typeof podcast.categoria_podcast);
     return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
         children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_Layout__WEBPACK_IMPORTED_MODULE_7__/* ["default"] */ .Z, {
             children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("article", {
                 className: " bg-white rounded-lg px-20 py-12 drop-shadow-md",
                 children: [
-                    (nota.categoria_nota.data != null) ?? /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_3___default()), {
-                        href: "/secciones/" + nota.categoria_nota.data.attributes.slug,
+                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_3___default()), {
+                        href: "/programas/" + podcast.categoria_podcast.data.attributes.slug,
                         children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("h3", {
                             className: "uppercase text-light-green font-medium mb-2 font-work",
-                            children: nota.categoria_nota.data.attributes.Titulo
+                            children: podcast.categoria_podcast.data.attributes.Titulo
                         })
                     }),
                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("h2", {
                         className: "font-oldStandard text-4xl mb-2",
-                        children: nota.Titulo
+                        children: podcast.Titulo
                     }),
                     /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("h4", {
                         className: "mb-1",
                         children: [
                             " ",
                             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_Date__WEBPACK_IMPORTED_MODULE_8__/* ["default"] */ .Z, {
-                                dateString: nota.updatedAt
+                                dateString: podcast.updatedAt
                             })
                         ]
                     }),
@@ -130,12 +132,12 @@ function Nota({ nota , backendUrl  }) {
                         children: [
                             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_image__WEBPACK_IMPORTED_MODULE_2___default()), {
                                 className: "inline rounded-full me-2 object-cover w-6 h-6",
-                                src: backendUrl + nota.autor.data.attributes.Foto.data.attributes.url,
-                                alt: nota.autor.data.attributes.Nombre,
+                                src: backendUrl + podcast.autor.data.attributes.Foto.data.attributes.url,
+                                alt: podcast.autor.data.attributes.Nombre,
                                 width: 36,
                                 height: 36
                             }),
-                            nota.autor.data.attributes.Nombre
+                            podcast.autor.data.attributes.Nombre
                         ]
                     }),
                     /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
@@ -143,22 +145,26 @@ function Nota({ nota , backendUrl  }) {
                         children: [
                             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_image__WEBPACK_IMPORTED_MODULE_2___default()), {
                                 className: "mx-auto",
-                                src: backendUrl + nota.ImagenDestacada.data.attributes.url,
-                                alt: nota.Titulo,
-                                width: nota.ImagenDestacada.data.attributes.width,
-                                height: nota.ImagenDestacada.data.attributes.height
+                                src: backendUrl + podcast.ImagenDestacada.data.attributes.url,
+                                alt: podcast.Titulo,
+                                width: podcast.ImagenDestacada.data.attributes.width,
+                                height: podcast.ImagenDestacada.data.attributes.height
                             }),
                             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("span", {
                                 className: "text-sm",
-                                children: nota.ImagenDestacada.data.attributes.caption
+                                children: podcast.ImagenDestacada.data.attributes.caption
                             })
                         ]
                     }),
                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
                         className: "content my-6 font-martel text-lg leading-10 text-justify",
                         dangerouslySetInnerHTML: {
-                            __html: nota.Cuerpo
+                            __html: podcast.Descripcion
                         }
+                    }),
+                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_PlayerButtonLg__WEBPACK_IMPORTED_MODULE_9__/* ["default"] */ .Z, {
+                        duracion: podcast.Duracion,
+                        onClick: ()=>onLoadPlayer(podcast.Link)
                     }),
                     /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
                         id: "metaData",
@@ -171,7 +177,7 @@ function Nota({ nota , backendUrl  }) {
                                         children: "Etiquetas"
                                     }),
                                     ":",
-                                    nota.tags.data.map((val, i)=>{
+                                    podcast.tags.data.map((val, i)=>{
                                         return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_3___default()), {
                                             className: "ps-2 hover:text-dark-green",
                                             href: "/etiqueta/" + val.attributes.slug,
@@ -220,12 +226,12 @@ function Nota({ nota , backendUrl  }) {
 }
 async function getStaticPaths() {
     const { data  } = await client.query({
-        query: _graphql_queries__WEBPACK_IMPORTED_MODULE_6__/* .GET_ARTICLE_SLUGS */ .n
+        query: _graphql_queries__WEBPACK_IMPORTED_MODULE_6__/* .GET_PODCASTS_SLUGS */ .rd
     });
-    const paths = data.notas.data.map((nota)=>{
+    const paths = data.podcasts.data.map((podcast)=>{
         return {
             params: {
-                slug: nota.attributes.slug
+                slug: podcast.attributes.slug
             }
         };
     });
@@ -236,17 +242,17 @@ async function getStaticPaths() {
 }
 async function getStaticProps({ params  }) {
     const { data  } = await client.query({
-        query: _graphql_queries__WEBPACK_IMPORTED_MODULE_6__/* .GET_ARTICLE */ .Rh,
+        query: _graphql_queries__WEBPACK_IMPORTED_MODULE_6__/* .GET_PODCAST */ .Gu,
         variables: {
             slug: params.slug
         }
     });
     return {
         props: {
-            nota: data.notas.data[0].attributes,
+            podcast: data.podcasts.data[0].attributes,
             backendUrl: backendUrl
         },
-        revalidate: 1
+        revalidate: 60
     };
 }
 
@@ -423,7 +429,7 @@ module.exports = import("@headlessui/react");;
 var __webpack_require__ = require("../../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [893,636,61,345,838], () => (__webpack_exec__(8420)));
+var __webpack_exports__ = __webpack_require__.X(0, [893,636,61,345,838,130], () => (__webpack_exec__(3066)));
 module.exports = __webpack_exports__;
 
 })();
