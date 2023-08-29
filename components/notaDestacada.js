@@ -11,7 +11,7 @@ export default function NotaDestacada({ titulo, slug, categoria, descripcionCort
 				<div className='flex basis-1/2'> 
 					<div className='flex flex-col justify-between me-3'>
 						<div>
-							{typeof categoria != "undefined" &&
+							{(typeof categoria != "undefined" && typeof categoria != null && categoria !=null ) &&
 								<Link href={'secciones/'+categoria.slug}>
 									<h3 className='uppercase text-light-green font-medium mb-2 font-work'>{categoria.Titulo}</h3>
 								</Link>

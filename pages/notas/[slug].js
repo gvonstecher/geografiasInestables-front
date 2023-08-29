@@ -17,6 +17,7 @@ const client = new ApolloClient({
 const backendUrl = process.env.STRAPIBASEURL;
 
 export default function Nota({nota, backendUrl}) {
+    console.log(nota);
   return (
     <>
         <Layout>

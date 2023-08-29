@@ -21,8 +21,9 @@ export default function Search({backendUrl, onLoadPlayer}) {
 
   const handleSearch = async () => {
     const client = new MeiliSearch({ 
-        host: process.env.MEILISEARCHURL
-    }); // Cambia la URL según tu configuración de MeiliSearch
+        host: process.env.NEXT_PUBLIC_MEILISEARCHURL,
+		apiKey:process.env.NEXT_PUBLIC_MEILISEARCHAPI
+    }); 
 
 	let searches = {};
 
@@ -131,15 +132,18 @@ export default function Search({backendUrl, onLoadPlayer}) {
 				</button>
 			</div>
           {results.map((result) => {
+			console.log(result);
             switch (result.indexUid) {
+				
               case 'nota':
                 return (
                   <NotaDestacada 
                     titulo={result.Titulo}
-                    slug={result.Slug}
+                    slug={result.slug}
                     categoria={result.categoria_nota}
                     descripcionCorta={result.DescripcionCorta}
-                    imagenDestacada={result.ImagenDestacada[0].url}
+					cuerpo={result.Cuerpo}
+                    imagenDestacada={result.ImagenDestacada.url}
 					backendUrl={backendUrl}
 					key={result._meilisearch_id}
                   />
@@ -152,7 +156,7 @@ export default function Search({backendUrl, onLoadPlayer}) {
                       categoria={result.categoria_nota}
                       descripcionCorta={result.DescripcionCorta}
 					  cuerpo={result.Cuerpo}
-                      imagenDestacada={result.ImagenDestacada[0].url}
+                      imagenDestacada={result.ImagenDestacada.url}
                       duracion={result.duracion}
                       link={result.Link}
                       backendUrl={backendUrl}
@@ -168,7 +172,7 @@ export default function Search({backendUrl, onLoadPlayer}) {
 							nombre={result.Nombre}
 							slug={result.slug}
 							descripcion={result.Descripcion}
-							foto={result.Foto[0].url}
+							foto={result.Foto.url}
 							backendUrl={backendUrl} />
 					</div>
                     
