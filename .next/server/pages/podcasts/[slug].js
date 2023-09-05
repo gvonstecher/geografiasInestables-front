@@ -200,7 +200,7 @@ async function getStaticPaths() {
     });
     return {
         paths: paths,
-        fallback: false
+        fallback: "blocking"
     };
 }
 async function getStaticProps({ params  }) {
