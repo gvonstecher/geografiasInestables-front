@@ -28,38 +28,6 @@ __webpack_async_result__();
 
 /***/ }),
 
-/***/ 6167:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-
-// EXPORTS
-__webpack_require__.d(__webpack_exports__, {
-  "Z": () => (/* binding */ Date_Date)
-});
-
-// EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
-var jsx_runtime = __webpack_require__(5893);
-;// CONCATENATED MODULE: external "date-fns"
-const external_date_fns_namespaceObject = require("date-fns");
-;// CONCATENATED MODULE: external "date-fns/locale"
-const locale_namespaceObject = require("date-fns/locale");
-;// CONCATENATED MODULE: ./components/Date.js
-
-
-
-function Date_Date({ dateString  }) {
-    const date = (0,external_date_fns_namespaceObject.parseISO)(dateString);
-    return /*#__PURE__*/ jsx_runtime.jsx("time", {
-        dateTime: dateString,
-        children: (0,external_date_fns_namespaceObject.format)(date, "d LLL, yyyy", {
-            locale: locale_namespaceObject.es
-        })
-    });
-}
-
-
-/***/ }),
-
 /***/ 2600:
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
@@ -78,11 +46,10 @@ __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __we
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(6689);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _apollo_client__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(9114);
-/* harmony import */ var _apollo_client__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_apollo_client__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _lib_apollo_client__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(5192);
 /* harmony import */ var _graphql_queries__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(2838);
 /* harmony import */ var _components_Layout__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(7345);
-/* harmony import */ var _components_Date__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(6167);
+/* harmony import */ var _components_Date__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(272);
 var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_components_Layout__WEBPACK_IMPORTED_MODULE_7__]);
 _components_Layout__WEBPACK_IMPORTED_MODULE_7__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];
 
@@ -94,13 +61,9 @@ _components_Layout__WEBPACK_IMPORTED_MODULE_7__ = (__webpack_async_dependencies_
 
 
 
-const client = new _apollo_client__WEBPACK_IMPORTED_MODULE_5__.ApolloClient({
-    uri: process.env.STRAPIGRAPHQLURL,
-    cache: new _apollo_client__WEBPACK_IMPORTED_MODULE_5__.InMemoryCache()
-});
+const client = (0,_lib_apollo_client__WEBPACK_IMPORTED_MODULE_5__/* .getApolloClient */ .W)(process.env.STRAPIGRAPHQLURL);
 const backendUrl = process.env.STRAPIBASEURL;
 function Nota({ nota , backendUrl  }) {
-    console.log(nota);
     return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
         children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_Layout__WEBPACK_IMPORTED_MODULE_7__/* ["default"] */ .Z, {
             children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("article", {
@@ -231,7 +194,7 @@ async function getStaticPaths() {
     });
     return {
         paths: paths,
-        fallback: false
+        fallback: "blocking"
     };
 }
 async function getStaticProps({ params  }) {
@@ -246,7 +209,7 @@ async function getStaticProps({ params  }) {
             nota: data.notas.data[0].attributes,
             backendUrl: backendUrl
         },
-        revalidate: 1
+        revalidate: 60
     };
 }
 
@@ -259,6 +222,20 @@ __webpack_async_result__();
 /***/ ((module) => {
 
 module.exports = require("@apollo/client");
+
+/***/ }),
+
+/***/ 4146:
+/***/ ((module) => {
+
+module.exports = require("date-fns");
+
+/***/ }),
+
+/***/ 5564:
+/***/ ((module) => {
+
+module.exports = require("date-fns/locale");
 
 /***/ }),
 
@@ -423,7 +400,7 @@ module.exports = import("@headlessui/react");;
 var __webpack_require__ = require("../../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [893,636,61,345,838], () => (__webpack_exec__(8420)));
+var __webpack_exports__ = __webpack_require__.X(0, [893,636,61,345,838,20], () => (__webpack_exec__(8420)));
 module.exports = __webpack_exports__;
 
 })();

@@ -109,14 +109,14 @@ function NotaDestacada({ titulo , slug , categoria , descripcionCorta , cuerpo ,
                             /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
                                 children: [
                                     typeof categoria != "undefined" && typeof categoria != null && categoria != null && /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_2___default()), {
-                                        href: "secciones/" + categoria.slug,
+                                        href: "/secciones/" + categoria.attributes.slug,
                                         children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("h3", {
                                             className: "uppercase text-light-green font-medium mb-2 font-work",
-                                            children: categoria.Titulo
+                                            children: categoria.attributes.Titulo
                                         })
                                     }),
                                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_2___default()), {
-                                        href: "notas/" + slug,
+                                        href: "/notas/" + slug,
                                         children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("h2", {
                                             className: "font-oldStandard text-4xl mb-3",
                                             children: titulo
@@ -125,7 +125,7 @@ function NotaDestacada({ titulo , slug , categoria , descripcionCorta , cuerpo ,
                                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
                                         className: "my-3 text-lg",
                                         children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_2___default()), {
-                                            href: "notas/" + slug,
+                                            href: "/notas/" + slug,
                                             children: descripcionCorta
                                         })
                                     })
@@ -140,9 +140,9 @@ function NotaDestacada({ titulo , slug , categoria , descripcionCorta , cuerpo ,
                 /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
                     className: "basis-1/2",
                     children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_2___default()), {
-                        href: "notas/" + slug,
+                        href: "/notas/" + slug,
                         children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_image__WEBPACK_IMPORTED_MODULE_1___default()), {
-                            src: backendUrl + imagenDestacada,
+                            src: backendUrl + imagenDestacada.attributes.url,
                             alt: titulo,
                             width: 700,
                             height: 500,

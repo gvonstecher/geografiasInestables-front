@@ -3,29 +3,27 @@ import Image from 'next/image'
 import Link from 'next/link';
 import React from 'react'
 
-import { ApolloClient, InMemoryCache } from '@apollo/client'
+import { getApolloClient } from '@/lib/apollo-client';
 import { GET_PODCASTS_SLUGS, GET_PODCAST} from '../../graphql/queries';
 import Layout from '@/components/Layout';
 import Date from '@/components/Date';
 import PlayerButtonLg from '@/components/PlayerButtonLg';
 
 
-const client = new ApolloClient({
-    uri: process.env.STRAPIGRAPHQLURL,
-    cache: new InMemoryCache()
-  });
+const client = getApolloClient(process.env.STRAPIGRAPHQLURL);
 
 const backendUrl = process.env.STRAPIBASEURL;
 
 export default function Podcast({podcast, backendUrl, onLoadPlayer}) {
-    console.log(typeof podcast.categoria_podcast);
   return (
     <>
         <Layout>
             <article className=" bg-white rounded-lg px-20 py-12 drop-shadow-md">
-                <Link href={'/programas/'+podcast.categoria_podcast.data.attributes.slug}>
-					<h3 className='uppercase text-light-green font-medium mb-2 font-work'>{podcast.categoria_podcast.data.attributes.Titulo}</h3>
-				</Link>
+                {podcast.categoria_podcast.data != null ??
+                    <Link href={'/programas/'+podcast.categoria_podcast.data.attributes.slug}>
+                        <h3 className='uppercase text-light-green font-medium mb-2 font-work'>{podcast.categoria_podcast.data.attributes.Titulo}</h3>
+                    </Link>
+                }
                 <h2 className='font-oldStandard text-4xl mb-2'>{podcast.Titulo}</h2>
                 <h4 className='mb-1'> <Date dateString={podcast.updatedAt} /></h4>
                 <h5>

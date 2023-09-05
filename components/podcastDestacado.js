@@ -10,9 +10,9 @@ export default function PodcastDestacado({ titulo, slug, categoria, descripcionC
 								<div className='flex basis-1/2'>
 									<div className='flex flex-col justify-between me-3'>
 										<div>
-                                            {typeof categoria != "undefined" &&
-                                                <Link href={'/programas/'+categoria.slug}>
-                                                    <h3 className='text-light-green font-medium mb-2 font-work'>{categoria.Titulo}</h3>
+										{(typeof categoria != "undefined" && typeof categoria != null && categoria !=null ) &&
+                                                <Link href={'/programas/'+categoria.attributes.slug}>
+                                                    <h3 className='text-light-green font-medium mb-2 font-work'>{categoria.attributes.Titulo}</h3>
                                                 </Link>
                                             }
 											<Link href={'/podcasts/'+slug}>

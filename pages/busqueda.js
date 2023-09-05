@@ -132,7 +132,6 @@ export default function Search({backendUrl, onLoadPlayer}) {
 				</button>
 			</div>
           {results.map((result) => {
-			console.log(result);
             switch (result.indexUid) {
 				
               case 'nota':

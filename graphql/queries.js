@@ -317,6 +317,74 @@ const GET_AUTORS = gql`
   }
 `;
 
+const GET_TAGS_SLUGS = gql`
+    query getTagsSlugs{
+      tags(pagination: {start: 0, limit:-1}, sort: "publishedAt:DESC") {
+        data{
+          id
+          attributes{
+            slug
+          }
+        }
+      }
+}`;
+
+
+const GET_TAG_POSTS = gql`
+query getTagsPosts($slug: String!) {
+  tags( filters: { slug: { eq: $slug } }) {
+    data {
+      attributes {
+        Tag
+        slug
+        notas (sort: "createdAt:desc"){
+          data {
+            attributes {
+              Titulo
+              slug
+              DescripcionCorta
+              Cuerpo
+              createdAt
+              ImagenDestacada {
+                data {
+                  attributes {
+                    url
+                    width
+                    height
+                  }
+                }
+              }
+            }
+          }
+        }
+        podcasts (sort: "createdAt:desc"){
+          data {
+            attributes {
+              Titulo
+              slug
+              DescripcionCorta
+              Link
+              Duracion
+              createdAt
+              ImagenDestacada {
+                data {
+                  attributes {
+                    url
+                    width
+                    height
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+`;
+
+
 
   export { 
     GET_HOME_POSTS, 
@@ -328,5 +396,7 @@ const GET_AUTORS = gql`
     GET_SECTION_ARTICLES,
     GET_PROGRAMS_SLUGS,
     GET_PROGRAM_PODCASTS,
-    GET_AUTORS
+    GET_AUTORS,
+    GET_TAGS_SLUGS,
+    GET_TAG_POSTS
   };

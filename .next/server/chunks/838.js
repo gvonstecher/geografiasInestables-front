@@ -7,6 +7,8 @@ exports.modules = {
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Ct": () => (/* binding */ GET_TAG_POSTS),
+/* harmony export */   "Fi": () => (/* binding */ GET_TAGS_SLUGS),
 /* harmony export */   "Gu": () => (/* binding */ GET_PODCAST),
 /* harmony export */   "Ix": () => (/* binding */ GET_SECTION_ARTICLES),
 /* harmony export */   "K7": () => (/* binding */ GET_PROGRAMS_SLUGS),
@@ -323,6 +325,70 @@ const GET_AUTORS = _apollo_client__WEBPACK_IMPORTED_MODULE_0__.gql`
       }
     }
   }
+`;
+const GET_TAGS_SLUGS = _apollo_client__WEBPACK_IMPORTED_MODULE_0__.gql`
+    query getTagsSlugs{
+      tags(pagination: {start: 0, limit:-1}, sort: "publishedAt:DESC") {
+        data{
+          id
+          attributes{
+            slug
+          }
+        }
+      }
+}`;
+const GET_TAG_POSTS = _apollo_client__WEBPACK_IMPORTED_MODULE_0__.gql`
+query getTagsPosts($slug: String!) {
+  tags( filters: { slug: { eq: $slug } }) {
+    data {
+      attributes {
+        Tag
+        slug
+        notas (sort: "createdAt:desc"){
+          data {
+            attributes {
+              Titulo
+              slug
+              DescripcionCorta
+              Cuerpo
+              createdAt
+              ImagenDestacada {
+                data {
+                  attributes {
+                    url
+                    width
+                    height
+                  }
+                }
+              }
+            }
+          }
+        }
+        podcasts (sort: "createdAt:desc"){
+          data {
+            attributes {
+              Titulo
+              slug
+              DescripcionCorta
+              Link
+              Duracion
+              createdAt
+              ImagenDestacada {
+                data {
+                  attributes {
+                    url
+                    width
+                    height
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
 `;
 
 

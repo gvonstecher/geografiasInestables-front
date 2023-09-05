@@ -1,16 +1,19 @@
 {
+  "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
   "/api/hello": "pages/api/hello.js",
-  "/_error": "pages/_error.js",
-  "/musica": "pages/musica.js",
-  "/notas/[slug]": "pages/notas/[slug].js",
+  "/api/revalidate": "pages/api/revalidate.js",
   "/_app": "pages/_app.js",
-  "/busqueda": "pages/busqueda.js",
   "/acerca-de": "pages/acerca-de.js",
+  "/etiqueta/[slug]": "pages/etiqueta/[slug].js",
+  "/busqueda": "pages/busqueda.js",
+  "/musica": "pages/musica.js",
   "/politicas-de-privacidad": "pages/politicas-de-privacidad.js",
   "/": "pages/index.js",
-  "/secciones/[slug]": "pages/secciones/[slug].js",
+  "/notas/[slug]": "pages/notas/[slug].js",
   "/podcasts/[slug]": "pages/podcasts/[slug].js",
+  "/secciones/[slug]": "pages/secciones/[slug].js",
+  "/programas/[slug]": "pages/programas/[slug].js",
   "/terminos-y-condiciones": "pages/terminos-y-condiciones.js",
-  "/programas/[slug]": "pages/programas/[slug].js"
+  "/404": "pages/404.html"
 }

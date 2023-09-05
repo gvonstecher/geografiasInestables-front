@@ -12,7 +12,7 @@ __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __we
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* reexport safe */ private_next_pages_index_js__WEBPACK_IMPORTED_MODULE_0__.Z),
-/* harmony export */   "getServerSideProps": () => (/* reexport safe */ private_next_pages_index_js__WEBPACK_IMPORTED_MODULE_0__.N)
+/* harmony export */   "getStaticProps": () => (/* reexport safe */ private_next_pages_index_js__WEBPACK_IMPORTED_MODULE_0__.b)
 /* harmony export */ });
 /* harmony import */ var private_next_pages_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6616);
 var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([private_next_pages_index_js__WEBPACK_IMPORTED_MODULE_0__]);
@@ -43,19 +43,19 @@ __webpack_async_result__();
 
 
 
-function NotaCaja({ nota , backendUrl  }) {
+function NotaCaja({ titulo , slug , categoria , cuerpo , imagenDestacada , backendUrl  }) {
     return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
         children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("article", {
             className: " bg-white rounded-lg drop-shadow-md",
             children: [
                 /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_2___default()), {
-                    href: "notas/" + nota.attributes.slug,
+                    href: "/notas/" + slug,
                     children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_image__WEBPACK_IMPORTED_MODULE_1___default()), {
                         className: "object-cover h-60 w-full rounded-t-lg",
-                        src: backendUrl + nota.attributes.ImagenDestacada.data.attributes.url,
+                        src: backendUrl + imagenDestacada.attributes.url,
                         width: 400,
                         height: 250,
-                        alt: nota.attributes.Titulo
+                        alt: titulo
                     })
                 }),
                 /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
@@ -63,18 +63,18 @@ function NotaCaja({ nota , backendUrl  }) {
                     children: [
                         /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
                             children: [
-                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_2___default()), {
-                                    href: "secciones/" + nota.attributes.categoria_nota.data.attributes.slug,
+                                typeof categoria != "undefined" && typeof categoria != null && categoria != null && /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_2___default()), {
+                                    href: "/secciones/" + categoria.attributes.slug,
                                     children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("h3", {
                                         className: "uppercase text-light-green font-medium mb-2 font-work",
-                                        children: nota.attributes.categoria_nota.data.attributes.Titulo
+                                        children: categoria.attributes.Titulo
                                     })
                                 }),
                                 /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_2___default()), {
-                                    href: "notas/" + nota.attributes.slug,
+                                    href: "/notas/" + slug,
                                     children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("h2", {
                                         className: "font-martel text-xl font-bold",
-                                        children: nota.attributes.Titulo
+                                        children: titulo
                                     })
                                 })
                             ]
@@ -82,7 +82,7 @@ function NotaCaja({ nota , backendUrl  }) {
                         /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
                             className: "pt-4 text-gray-800 text-sm",
                             children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_TiempoDeLectura__WEBPACK_IMPORTED_MODULE_3__/* ["default"] */ .Z, {
-                                cuerpo: nota.attributes.Cuerpo
+                                cuerpo: cuerpo
                             })
                         })
                     ]
@@ -206,40 +206,42 @@ const PlayerButtonSm = ({ duracion =null , onClick  })=>{
 
 
 
-function PodcastCaja({ podcast , backendUrl , onLoadPlayer  }) {
+function PodcastCaja({ titulo , slug , categoria , duracion , link , imagenDestacada , backendUrl , onLoadPlayer  }) {
+    console.log(categoria);
+    console.log(typeof categoria);
     return /*#__PURE__*/ jsx_runtime.jsx(jsx_runtime.Fragment, {
         children: /*#__PURE__*/ (0,jsx_runtime.jsxs)("article", {
             className: " bg-white rounded-lg drop-shadow-md",
             children: [
                 /*#__PURE__*/ jsx_runtime.jsx((link_default()), {
-                    href: "podcasts/" + podcast.attributes.slug,
+                    href: "/podcasts/" + slug,
                     children: /*#__PURE__*/ jsx_runtime.jsx((image_default()), {
                         className: "object-cover h-60 w-full rounded-t-lg",
-                        src: backendUrl + podcast.attributes.ImagenDestacada.data.attributes.url,
+                        src: backendUrl + imagenDestacada,
                         width: 400,
                         height: 250,
-                        alt: podcast.attributes.Titulo
+                        alt: titulo
                     })
                 }),
                 /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
                     className: "flex flex-col justify-between p-3 text-center items-center",
                     children: [
                         /*#__PURE__*/ jsx_runtime.jsx(components_PlayerButtonSm, {
-                            duracion: podcast.attributes.Duracion,
-                            onClick: ()=>onLoadPlayer(podcast.attributes.Link)
+                            duracion: duracion,
+                            onClick: ()=>onLoadPlayer(link)
                         }),
                         /*#__PURE__*/ jsx_runtime.jsx((link_default()), {
-                            href: "podcasts/" + podcast.attributes.slug,
+                            href: "/podcasts/" + slug,
                             children: /*#__PURE__*/ jsx_runtime.jsx("h2", {
                                 className: "font-medium",
-                                children: podcast.attributes.Titulo
+                                children: titulo
                             })
                         }),
-                        /*#__PURE__*/ jsx_runtime.jsx((link_default()), {
-                            href: "programas/" + podcast.attributes.categoria_podcast.data.attributes.slug,
+                        typeof categoria != "undefined" && typeof categoria != null && categoria != null && /*#__PURE__*/ jsx_runtime.jsx((link_default()), {
+                            href: "/programas/" + categoria.attributes.slug,
                             children: /*#__PURE__*/ jsx_runtime.jsx("h3", {
-                                className: "mb-2 font-work",
-                                children: podcast.attributes.categoria_podcast.data.attributes.Titulo
+                                className: "text-light-green font-medium mb-2 font-work",
+                                children: categoria.attributes.Titulo
                             })
                         })
                     ]
@@ -252,18 +254,60 @@ function PodcastCaja({ podcast , backendUrl , onLoadPlayer  }) {
 
 /***/ }),
 
+/***/ 5192:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "W": () => (/* binding */ getApolloClient)
+/* harmony export */ });
+/* unused harmony export _createApolloClient */
+/* harmony import */ var _apollo_client__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(9114);
+/* harmony import */ var _apollo_client__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_apollo_client__WEBPACK_IMPORTED_MODULE_0__);
+
+let client;
+/**
+ * getApolloClient
+ */ function getApolloClient(uri) {
+    if (!client) {
+        client = _createApolloClient(uri);
+    }
+    return client;
+}
+/**
+ * createApolloClient
+ */ function _createApolloClient(uri) {
+    return new _apollo_client__WEBPACK_IMPORTED_MODULE_0__.ApolloClient({
+        link: new _apollo_client__WEBPACK_IMPORTED_MODULE_0__.HttpLink({
+            uri: uri
+        }),
+        cache: new _apollo_client__WEBPACK_IMPORTED_MODULE_0__.InMemoryCache(),
+        defaultOptions: {
+            watchQuery: {
+                fetchPolicy: "no-cache",
+                errorPolicy: "ignore"
+            },
+            query: {
+                fetchPolicy: "no-cache",
+                errorPolicy: "all"
+            }
+        }
+    });
+}
+
+
+/***/ }),
+
 /***/ 6616:
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "N": () => (/* binding */ getServerSideProps),
-/* harmony export */   "Z": () => (/* binding */ Home)
+/* harmony export */   "Z": () => (/* binding */ Home),
+/* harmony export */   "b": () => (/* binding */ getStaticProps)
 /* harmony export */ });
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5893);
 /* harmony import */ var _components_Layout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(7345);
-/* harmony import */ var _apollo_client__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(9114);
-/* harmony import */ var _apollo_client__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_apollo_client__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _lib_apollo_client__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(5192);
 /* harmony import */ var _graphql_queries__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(2838);
 /* harmony import */ var _components_notaDestacada__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(1618);
 /* harmony import */ var _components_notaCaja__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(7388);
@@ -293,15 +337,19 @@ function Home({ notas , podcasts , backendUrl , onLoadPlayer  }) {
                             return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_notaDestacada__WEBPACK_IMPORTED_MODULE_4__/* ["default"] */ .Z, {
                                 titulo: nota.attributes.Titulo,
                                 slug: nota.attributes.slug,
-                                categoria: nota.attributes.categoria_nota,
+                                categoria: nota.attributes.categoria_nota.data,
                                 descripcionCorta: nota.attributes.DescripcionCorta,
                                 cuerpo: nota.attributes.Cuerpo,
-                                imagenDestacada: nota.attributes.ImagenDestacada.data.attributes.url,
+                                imagenDestacada: nota.attributes.ImagenDestacada.data,
                                 backendUrl: backendUrl
                             }, i);
                         } else {
                             return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_notaCaja__WEBPACK_IMPORTED_MODULE_5__/* ["default"] */ .Z, {
-                                nota: nota,
+                                titulo: nota.attributes.Titulo,
+                                slug: nota.attributes.slug,
+                                categoria: nota.attributes.categoria_nota.data,
+                                cuerpo: nota.attributes.Cuerpo,
+                                imagenDestacada: nota.attributes.ImagenDestacada.data,
                                 backendUrl: backendUrl
                             }, i);
                         }
@@ -312,10 +360,11 @@ function Home({ notas , podcasts , backendUrl , onLoadPlayer  }) {
                     className: "grid grid-cols-4 gap-8 font-work mt-10",
                     children: podcasts.map((podcast, i)=>{
                         if (i === 0) {
+                            console.log(podcast);
                             return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_podcastDestacado__WEBPACK_IMPORTED_MODULE_6__/* ["default"] */ .Z, {
                                 titulo: podcast.attributes.Titulo,
                                 slug: podcast.attributes.slug,
-                                categoria: podcast.attributes.categoria_nota,
+                                categoria: podcast.attributes.categoria_podcast.data,
                                 descripcionCorta: podcast.attributes.DescripcionCorta,
                                 duracion: podcast.attributes.Duracion,
                                 link: podcast.attributes.Link,
@@ -326,6 +375,13 @@ function Home({ notas , podcasts , backendUrl , onLoadPlayer  }) {
                         } else {
                             return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_podcastCaja__WEBPACK_IMPORTED_MODULE_7__/* ["default"] */ .Z, {
                                 podcast: podcast,
+                                titulo: podcast.attributes.Titulo,
+                                slug: podcast.attributes.slug,
+                                categoria: podcast.attributes.categoria_podcast.data,
+                                descripcionCorta: podcast.attributes.DescripcionCorta,
+                                duracion: podcast.attributes.Duracion,
+                                link: podcast.attributes.Link,
+                                imagenDestacada: podcast.attributes.ImagenDestacada.data.attributes.url,
                                 backendUrl: backendUrl,
                                 onLoadPlayer: onLoadPlayer
                             }, i);
@@ -336,11 +392,8 @@ function Home({ notas , podcasts , backendUrl , onLoadPlayer  }) {
         })
     });
 }
-async function getServerSideProps() {
-    const client = new _apollo_client__WEBPACK_IMPORTED_MODULE_2__.ApolloClient({
-        uri: apiUrl,
-        cache: new _apollo_client__WEBPACK_IMPORTED_MODULE_2__.InMemoryCache()
-    });
+async function getStaticProps() {
+    const client = (0,_lib_apollo_client__WEBPACK_IMPORTED_MODULE_2__/* .getApolloClient */ .W)(process.env.STRAPIGRAPHQLURL);
     const { data  } = await client.query({
         query: _graphql_queries__WEBPACK_IMPORTED_MODULE_3__/* .GET_HOME_POSTS */ .Z5
     });
@@ -349,7 +402,8 @@ async function getServerSideProps() {
             notas: data.notas.data,
             podcasts: data.podcasts.data,
             backendUrl: backendUrl
-        }
+        },
+        revalidate: 60
     };
 }
 

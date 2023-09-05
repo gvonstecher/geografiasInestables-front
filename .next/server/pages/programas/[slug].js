@@ -28,6 +28,49 @@ __webpack_async_result__();
 
 /***/ }),
 
+/***/ 5192:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "W": () => (/* binding */ getApolloClient)
+/* harmony export */ });
+/* unused harmony export _createApolloClient */
+/* harmony import */ var _apollo_client__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(9114);
+/* harmony import */ var _apollo_client__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_apollo_client__WEBPACK_IMPORTED_MODULE_0__);
+
+let client;
+/**
+ * getApolloClient
+ */ function getApolloClient(uri) {
+    if (!client) {
+        client = _createApolloClient(uri);
+    }
+    return client;
+}
+/**
+ * createApolloClient
+ */ function _createApolloClient(uri) {
+    return new _apollo_client__WEBPACK_IMPORTED_MODULE_0__.ApolloClient({
+        link: new _apollo_client__WEBPACK_IMPORTED_MODULE_0__.HttpLink({
+            uri: uri
+        }),
+        cache: new _apollo_client__WEBPACK_IMPORTED_MODULE_0__.InMemoryCache(),
+        defaultOptions: {
+            watchQuery: {
+                fetchPolicy: "no-cache",
+                errorPolicy: "ignore"
+            },
+            query: {
+                fetchPolicy: "no-cache",
+                errorPolicy: "all"
+            }
+        }
+    });
+}
+
+
+/***/ }),
+
 /***/ 8412:
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
@@ -44,8 +87,7 @@ __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __we
 /* harmony import */ var next_image__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_image__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(1664);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _apollo_client__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(9114);
-/* harmony import */ var _apollo_client__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_apollo_client__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _lib_apollo_client__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(5192);
 /* harmony import */ var _graphql_queries__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(2838);
 /* harmony import */ var _components_Layout__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(7345);
 /* harmony import */ var _components_podcastDestacado__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(2383);
@@ -59,10 +101,7 @@ _components_Layout__WEBPACK_IMPORTED_MODULE_6__ = (__webpack_async_dependencies_
 
 
 
-const client = new _apollo_client__WEBPACK_IMPORTED_MODULE_4__.ApolloClient({
-    uri: process.env.STRAPIGRAPHQLURL,
-    cache: new _apollo_client__WEBPACK_IMPORTED_MODULE_4__.InMemoryCache()
-});
+const client = (0,_lib_apollo_client__WEBPACK_IMPORTED_MODULE_4__/* .getApolloClient */ .W)(process.env.STRAPIGRAPHQLURL);
 const backendUrl = process.env.STRAPIBASEURL;
 function Notas({ titulo , podcasts , backendUrl , onLoadPlayer  }) {
     return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
@@ -106,7 +145,7 @@ async function getStaticPaths() {
     });
     return {
         paths: paths,
-        fallback: false
+        fallback: "blocking"
     };
 }
 async function getStaticProps({ params  }) {

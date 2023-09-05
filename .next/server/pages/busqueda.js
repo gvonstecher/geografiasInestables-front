@@ -213,7 +213,6 @@ function Search({ backendUrl , onLoadPlayer  }) {
                     ]
                 }),
                 results.map((result)=>{
-                    console.log(result);
                     switch(result.indexUid){
                         case "nota":
                             return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_notaDestacada__WEBPACK_IMPORTED_MODULE_7__/* ["default"] */ .Z, {

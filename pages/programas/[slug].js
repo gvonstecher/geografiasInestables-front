@@ -2,16 +2,13 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link';
 
-import { ApolloClient, InMemoryCache } from '@apollo/client'
+import { getApolloClient } from '@/lib/apollo-client';
 import { GET_PROGRAMS_SLUGS, GET_PROGRAM_PODCASTS} from '../../graphql/queries';
 import Layout from '@/components/Layout';
 import PodcastDestacado from '@/components/podcastDestacado';
 
 
-const client = new ApolloClient({
-    uri: process.env.STRAPIGRAPHQLURL,
-    cache: new InMemoryCache()
-});
+const client = getApolloClient(process.env.STRAPIGRAPHQLURL);
 
 const backendUrl = process.env.STRAPIBASEURL;
 
@@ -56,7 +53,7 @@ export async function getStaticPaths(){
 
     return {
         paths: paths,
-        fallback:false
+        fallback: 'blocking'
     }
 }
 

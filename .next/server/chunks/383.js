@@ -34,11 +34,11 @@ function PodcastDestacado({ titulo , slug , categoria , descripcionCorta , durac
                         children: [
                             /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
                                 children: [
-                                    typeof categoria != "undefined" && /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_2___default()), {
-                                        href: "/programas/" + categoria.slug,
+                                    typeof categoria != "undefined" && typeof categoria != null && categoria != null && /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_2___default()), {
+                                        href: "/programas/" + categoria.attributes.slug,
                                         children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("h3", {
                                             className: "text-light-green font-medium mb-2 font-work",
-                                            children: categoria.Titulo
+                                            children: categoria.attributes.Titulo
                                         })
                                     }),
                                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_2___default()), {

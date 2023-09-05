@@ -3,21 +3,19 @@ import Image from 'next/image'
 import Link from 'next/link';
 import React from 'react'
 
-import { ApolloClient, InMemoryCache } from '@apollo/client'
+import { getApolloClient } from '@/lib/apollo-client';
 import { GET_ARTICLE_SLUGS, GET_ARTICLE} from '../../graphql/queries';
 import Layout from '@/components/Layout';
 import Date from '@/components/Date';
 
 
-const client = new ApolloClient({
-    uri: process.env.STRAPIGRAPHQLURL,
-    cache: new InMemoryCache()
-  });
+const client = getApolloClient(process.env.STRAPIGRAPHQLURL);
 
 const backendUrl = process.env.STRAPIBASEURL;
 
 export default function Nota({nota, backendUrl}) {
-    console.log(nota);
+
+    
   return (
     <>
         <Layout>
@@ -103,7 +101,7 @@ export async function getStaticPaths(){
 
     return {
         paths: paths,
-        fallback:false
+        fallback: 'blocking'
     }
 }
 
@@ -119,6 +117,6 @@ export async function getStaticProps({ params }){
             nota: data.notas.data[0].attributes,
             backendUrl: backendUrl
         },
-        revalidate: 1,
+        revalidate: 60,
     }
 }

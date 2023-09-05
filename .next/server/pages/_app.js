@@ -5,9 +5,14 @@ exports.ids = [888];
 exports.modules = {
 
 /***/ 4234:
-/***/ (() => {
+/***/ ((module) => {
 
-throw new Error("Module build failed (from ./node_modules/next/dist/build/webpack/loaders/next-font-loader/index.js):\nNextFontError: Failed to fetch `Martel` from Google Fonts.\n    at nextFontError (C:\\Users\\Gustavo\\Documents\\geografiasInestables\\front\\node_modules\\next\\dist\\compiled\\@next\\font\\dist\\next-font-error.js:8:17)\n    at nextFontGoogleFontLoader (C:\\Users\\Gustavo\\Documents\\geografiasInestables\\front\\node_modules\\next\\dist\\compiled\\@next\\font\\dist\\google\\loader.js:87:49)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async C:\\Users\\Gustavo\\Documents\\geografiasInestables\\front\\node_modules\\next\\dist\\build\\webpack\\loaders\\next-font-loader\\index.js:76:93\n    at async Span.traceAsyncFn (C:\\Users\\Gustavo\\Documents\\geografiasInestables\\front\\node_modules\\next\\dist\\trace\\trace.js:103:20)");
+// Exports
+module.exports = {
+	"style": {"fontFamily":"'__Martel_0dff49', '__Martel_Fallback_0dff49'","fontStyle":"normal"},
+	"className": "__className_0dff49"
+};
+
 
 /***/ }),
 
@@ -36,9 +41,14 @@ module.exports = {
 /***/ }),
 
 /***/ 2019:
-/***/ (() => {
+/***/ ((module) => {
 
-throw new Error("Module build failed (from ./node_modules/next/dist/build/webpack/loaders/next-font-loader/index.js):\nNextFontError: Failed to fetch `Work Sans` from Google Fonts.\n    at nextFontError (C:\\Users\\Gustavo\\Documents\\geografiasInestables\\front\\node_modules\\next\\dist\\compiled\\@next\\font\\dist\\next-font-error.js:8:17)\n    at nextFontGoogleFontLoader (C:\\Users\\Gustavo\\Documents\\geografiasInestables\\front\\node_modules\\next\\dist\\compiled\\@next\\font\\dist\\google\\loader.js:87:49)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async C:\\Users\\Gustavo\\Documents\\geografiasInestables\\front\\node_modules\\next\\dist\\build\\webpack\\loaders\\next-font-loader\\index.js:76:93\n    at async Span.traceAsyncFn (C:\\Users\\Gustavo\\Documents\\geografiasInestables\\front\\node_modules\\next\\dist\\trace\\trace.js:103:20)");
+// Exports
+module.exports = {
+	"style": {"fontFamily":"'__Work_Sans_d174fa', '__Work_Sans_Fallback_d174fa'","fontStyle":"normal"},
+	"className": "__className_d174fa"
+};
+
 
 /***/ }),
 

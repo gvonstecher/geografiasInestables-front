@@ -2,16 +2,13 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link';
 
-import { ApolloClient, InMemoryCache } from '@apollo/client'
+import { getApolloClient } from '@/lib/apollo-client';
 import { GET_SECTION_SLUGS, GET_SECTION_ARTICLES} from '../../graphql/queries';
 import Layout from '@/components/Layout';
 import NotaDestacada from '@/components/notaDestacada';
 
 
-const client = new ApolloClient({
-    uri: process.env.STRAPIGRAPHQLURL,
-    cache: new InMemoryCache()
-});
+const client = getApolloClient(process.env.STRAPIGRAPHQLURL);
 
 const backendUrl = process.env.STRAPIBASEURL;
 
@@ -28,10 +25,9 @@ export default function Notas({titulo,notas, backendUrl}) {
                                 nota={nota} 
 								titulo={nota.attributes.Titulo}
 								slug={nota.attributes.slug}
-								categoria={nota.attributes.categoria_nota}
 								descripcionCorta={nota.attributes.DescripcionCorta}
                                 cuerpo={nota.attributes.Cuerpo}
-								imagenDestacada={nota.attributes.ImagenDestacada.data.attributes.url}
+								imagenDestacada={nota.attributes.ImagenDestacada.data}
 								backendUrl={backendUrl} 
                             />
                         )
