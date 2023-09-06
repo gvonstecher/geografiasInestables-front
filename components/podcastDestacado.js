@@ -33,13 +33,15 @@ export default function PodcastDestacado({ titulo, slug, categoria, descripcionC
 								</div>
 								<div className='basis-1/2'>
 								<Link href={'podcasts/'+slug}>
-									<Image 
-										className='rounded-lg'
-										src={backendUrl+imagenDestacada} 
-										alt={titulo}
-										width={700}
-										height={500}
-									/>
+									{(typeof imagenDestacada != "undefined" && typeof imagenDestacada != null && imagenDestacada !=null ) &&
+										<Image 
+											className='rounded-lg'
+											src={backendUrl+imagenDestacada.attributes.url} 
+											alt={titulo}
+											width={700}
+											height={500}
+										/>
+									}
 								</Link>
 								</div>
 								

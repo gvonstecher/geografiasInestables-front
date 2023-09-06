@@ -49,7 +49,6 @@ export default function Home({notas,podcasts,backendUrl,onLoadPlayer}) {
 			<section id="home-podcasts" className="grid grid-cols-4 gap-8 font-work mt-10">
 				{podcasts.map((podcast, i) => {
 					if(i===0){
-						console.log(podcast);
 						return (
 							<PodcastDestacado
 								key={i} 
@@ -59,7 +58,7 @@ export default function Home({notas,podcasts,backendUrl,onLoadPlayer}) {
 								descripcionCorta={podcast.attributes.DescripcionCorta}
 								duracion={podcast.attributes.Duracion}
 								link={podcast.attributes.Link}
-								imagenDestacada={podcast.attributes.ImagenDestacada.data.attributes.url}
+								imagenDestacada={podcast.attributes.ImagenDestacada.data}
 								backendUrl={backendUrl} 
 								onLoadPlayer={onLoadPlayer}
 							/>
@@ -75,7 +74,7 @@ export default function Home({notas,podcasts,backendUrl,onLoadPlayer}) {
 								descripcionCorta={podcast.attributes.DescripcionCorta}
 								duracion={podcast.attributes.Duracion}
 								link={podcast.attributes.Link}
-								imagenDestacada={podcast.attributes.ImagenDestacada.data.attributes.url}
+								imagenDestacada={podcast.attributes.ImagenDestacada.data}
 								backendUrl={backendUrl} 
 								onLoadPlayer={onLoadPlayer}
 							/>

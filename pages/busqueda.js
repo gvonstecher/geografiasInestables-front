@@ -7,8 +7,8 @@ import { MeiliSearch } from 'meilisearch';
 import React from 'react'
 
 import Layout from '@/components/Layout';
-import NotaDestacada from '@/components/notaDestacada';
-import PodcastDestacado from '@/components/podcastDestacado';
+import NotaBusqueda from '@/components/notaBusqueda';
+import PodcastBusqueda from '@/components/podcastBusqueda';
 import AutorDestacado from '@/components/autorDestacado';
 
 const backendUrl = process.env.STRAPIBASEURL;
@@ -133,13 +133,13 @@ export default function Search({backendUrl, onLoadPlayer}) {
 			</div>
           {results.map((result) => {
             switch (result.indexUid) {
-				
               case 'nota':
                 return (
-                  <NotaDestacada 
+                  <NotaBusqueda
                     titulo={result.Titulo}
                     slug={result.slug}
-                    categoria={result.categoria_nota}
+                    categoriaSlug={result.categoria_nota.slug}
+					categoriaTitulo={result.categoria_nota.Titulo}
                     descripcionCorta={result.DescripcionCorta}
 					cuerpo={result.Cuerpo}
                     imagenDestacada={result.ImagenDestacada.url}
@@ -149,10 +149,11 @@ export default function Search({backendUrl, onLoadPlayer}) {
                 )
               case 'podcast':
                   return (
-                    <PodcastDestacado 
+                    <PodcastBusqueda 
                       titulo={result.Titulo}
                       slug={result.slug}
-                      categoria={result.categoria_nota}
+                      categoriaSlug={result.categoria_podcast.slug}
+					  categoriaTitulo={result.categoria_podcast.Titulo}
                       descripcionCorta={result.DescripcionCorta}
 					  cuerpo={result.Cuerpo}
                       imagenDestacada={result.ImagenDestacada.url}

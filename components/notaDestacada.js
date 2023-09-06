@@ -27,15 +27,17 @@ export default function NotaDestacada({ titulo, slug, categoria, descripcionCort
 									</div>
 								</div>
 								<div className='basis-1/2'>
-								<Link href={'/notas/'+slug}>
-									<Image 
-										src={backendUrl+imagenDestacada.attributes.url} 
-										alt={titulo}
-										width={700}
-										height={500}
-										priority
-									/>
-								</Link>
+								{(typeof imagenDestacada != "undefined" && typeof imagenDestacada != null && imagenDestacada !=null ) &&
+									<Link href={'/notas/'+slug}>
+										<Image 
+											src={backendUrl+imagenDestacada.attributes.url} 
+											alt={titulo}
+											width={700}
+											height={500}
+											priority
+										/>
+									</Link>
+								}
 								</div>
 								
 							</article>

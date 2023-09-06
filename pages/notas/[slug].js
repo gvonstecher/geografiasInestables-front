@@ -43,8 +43,8 @@ export default function Nota({nota, backendUrl}) {
                         className='mx-auto'
                         src={backendUrl+nota.ImagenDestacada.data.attributes.url} 
                         alt={nota.Titulo}
-                        width={nota.ImagenDestacada.data.attributes.width}
-                        height={nota.ImagenDestacada.data.attributes.height}
+                        width={(nota.ImagenDestacada.data.attributes.width) ? nota.ImagenDestacada.data.attributes.width : '1200'}
+                        height={(nota.ImagenDestacada.data.attributes.height) ? nota.ImagenDestacada.data.attributes.height : '500'}
                     />
                     <span className='text-sm'>{nota.ImagenDestacada.data.attributes.caption}</span>
                 </div>

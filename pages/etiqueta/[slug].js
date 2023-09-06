@@ -39,26 +39,10 @@ export default function Notas({titulo,notas, podcasts, backendUrl, onLoadPlayer}
                                 key={i} 
                                 titulo={podcast.attributes.Titulo}
 								slug={podcast.attributes.slug}
-								categoria={podcast.attributes.categoria_nota}
 								descripcionCorta={podcast.attributes.DescripcionCorta}
 								duracion={podcast.attributes.Duracion}
 								link={podcast.attributes.Link}
-								imagenDestacada={podcast.attributes.ImagenDestacada.data.attributes.url}
-								backendUrl={backendUrl} 
-								onLoadPlayer={onLoadPlayer} 
-                            />
-                        )
-                    })}{podcasts.map((podcast, i) => {
-                        return (
-                            <PodcastDestacado 
-                                key={i} 
-                                titulo={podcast.attributes.Titulo}
-								slug={podcast.attributes.slug}
-								categoria={podcast.attributes.categoria_nota}
-								descripcionCorta={podcast.attributes.DescripcionCorta}
-								duracion={podcast.attributes.Duracion}
-								link={podcast.attributes.Link}
-								imagenDestacada={podcast.attributes.ImagenDestacada.data.attributes.url}
+								imagenDestacada={podcast.attributes.ImagenDestacada.data}
 								backendUrl={backendUrl} 
 								onLoadPlayer={onLoadPlayer} 
                             />
