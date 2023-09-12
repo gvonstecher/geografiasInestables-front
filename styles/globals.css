@@ -1,6 +1,7 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
 
 :root {
   --background-rgb: #D3D3D3;
@@ -80,6 +81,8 @@
   }
 }
 
+
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -91,7 +94,7 @@ body {
   max-width: 100vw;
   overflow-x: hidden;
   font-family: var(--font-work);
-  font-size: 16px;
+  font-size: 14px;
 }
 
 body {
@@ -113,6 +116,44 @@ footer{
     height: 700px;
 }
 
+.content h1{ font-size: 36px;}
+.content h2{ font-size: 28px;}
+.content h3{ font-size: 24px;}
+.content h4{ font-size: 18px;}
+.content h5{ font-size: 16px;}
+.content h6{ font-size: 12px;}
+.content ul,
+.content ol{
+  margin-left: 20px;
+}
+.content ul li{
+  list-style-type: disc;
+}
+.content ol li{
+  list-style-type:decimal;
+}
+
+.content td{
+  border: 1px solid;
+  padding: 5px 10px;
+}
+
+.content pre{
+  text-wrap:wrap;
+}
+
+.content hr{
+  border-color:#000000;
+  margin-top: 20px;
+  padding-top: 20px;
+}
+
+.content iframe{
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  height: 100%;
+  margin: 15px 0px;
+}
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;

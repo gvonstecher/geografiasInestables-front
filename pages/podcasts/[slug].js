@@ -36,26 +36,27 @@ export default function Podcast({podcast, backendUrl, onLoadPlayer}) {
 				    />
                     {podcast.autor.data.attributes.Nombre}
                 </h5>
-
-                <div className='mx-auto mt-5 w-auto text-center'>
-                    <Image
-                        className='mx-auto'
-                        src={backendUrl+podcast.ImagenDestacada.data.attributes.url} 
-                        alt={podcast.Titulo}
-                        width={podcast.ImagenDestacada.data.attributes.width}
-                        height={podcast.ImagenDestacada.data.attributes.height}
-                    />
-                    <span className='text-sm'>{podcast.ImagenDestacada.data.attributes.caption}</span>
-                </div>
-
-                <div className='content my-6 font-martel text-lg leading-10 text-justify'
-                    dangerouslySetInnerHTML={{ __html: podcast.Descripcion }}
-                >
+                <div className='flex'>
+                    <div className='flex basis-2/3'>
+                        <div className='content my-6 font-martel text-lg leading-10 text-justify pe-4'
+                        dangerouslySetInnerHTML={{ __html: podcast.Cuerpo }}
+                        ></div>
+                    </div>
+                    <div className='flex basis-1/3'>
+                        <Image
+                            className='mx-auto'
+                            src={backendUrl+podcast.ImagenDestacada.data.attributes.url} 
+                            alt={podcast.Titulo}
+                            width={podcast.ImagenDestacada.data.attributes.width}
+                            height={podcast.ImagenDestacada.data.attributes.height}
+                        />
+                        <span className='text-sm'>{podcast.ImagenDestacada.data.attributes.caption}</span>
+                    </div>
                 </div>
 
                 <PlayerButtonLg duracion={podcast.Duracion} onClick={() =>onLoadPlayer(podcast.Link)} />
 
-                <div id='metaData' className='border-b border-light-green flex justify-between py-1'>
+                <div id='metaData' className='border-b border-light-green flex justify-between py-1 my-5'>
                     <div className='font-oldStandard text-2xl '>
                         <b>Etiquetas</b>:
                         {podcast.tags.data.map((val, i) => {

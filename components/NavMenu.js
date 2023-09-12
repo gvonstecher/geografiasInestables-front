@@ -80,15 +80,15 @@ const NavMenu = ({section}) => {
             <div className="content pe-2" dangerouslySetInnerHTML={{__html: icon}}></div> {tituloSeccion}
         </Menu.Button>
 
-        <Menu.Items className="absolute mt-2 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+        <Menu.Items className="absolute mt-5 origin-top-right divide-y divide-gray-100 rounded-md bg-header-rgb shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
             {navLinks.map((link) => (
                 <Menu.Item key={link.id} as={Fragment}>
                 {({ active }) => (
                   <Link
                     href={baseUrl+link.attributes.slug}
                     className={`${
-                      active ? 'bg-blue-500 text-white' : 'bg-white text-black'
-                    } group flex w-full items-center rounded-md px-2 py-2 text-sm whitespace-nowrap`}
+                      active ? 'bg-green text-white' : 'bg-white text-black'
+                    } group flex w-full items-center px-4 py-3 text-sm whitespace-nowrap`}
                   >
                     {link.attributes.Titulo}
                   </Link>

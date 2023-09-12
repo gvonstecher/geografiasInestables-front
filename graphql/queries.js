@@ -2,7 +2,7 @@ import { gql } from '@apollo/client';
 
 const GET_HOME_POSTS = gql`
 query getHomePosts{
-  notas(pagination: {start: 0, limit:4}, sort: "publishedAt:DESC") {
+  notas(pagination: {start: 0, limit:4}, sort: "updatedAt:DESC") {
     data{
       id
       attributes{
@@ -29,7 +29,7 @@ query getHomePosts{
       }
     }
   }
-  podcasts (pagination: {start: 0, limit:5}, sort: "publishedAt:DESC"){
+  podcasts (pagination: {start: 0, limit:5}, sort: "updatedAt:DESC"){
     data{
       id,
       attributes{
@@ -63,7 +63,7 @@ query getHomePosts{
 
 const GET_ARTICLE_SLUGS = gql`
     query getArticleSlugs{
-      notas(pagination: {start: 0, limit:-1}, sort: "publishedAt:DESC") {
+      notas(pagination: {start: 0, limit:-1}, sort: "updatedAt:DESC") {
         data{
           id
           attributes{
@@ -135,7 +135,7 @@ const GET_ARTICLE = gql`
 
 const GET_PODCASTS_SLUGS = gql`
     query getPodcastSlugs{
-      podcasts(pagination: {start: 0, limit:-1}, sort: "publishedAt:DESC") {
+      podcasts(pagination: {start: 0, limit:-1}, sort: "updatedAt:DESC") {
         data{
           id
           attributes{
@@ -208,7 +208,7 @@ const GET_PODCAST = gql`
 
 const GET_SECTION_SLUGS = gql`
     query getSectionSlugs{
-      categoriaNotas(pagination: {start: 0, limit:-1}, sort: "publishedAt:DESC") {
+      categoriaNotas(pagination: {start: 0, limit:-1}, sort: "updatedAt:DESC") {
         data{
           id
           attributes{
@@ -241,6 +241,14 @@ query getSectionArticles($slug: String!){
                     }
                   }
                 }
+                categoria_nota{
+                  data{
+                    attributes{
+                      Titulo
+                      slug
+                    }
+                  }
+                }
               }
             }
           }
@@ -252,7 +260,7 @@ query getSectionArticles($slug: String!){
 
 const GET_PROGRAMS_SLUGS = gql`
     query getProgramSlugs{
-      categoriaPodcasts(pagination: {start: 0, limit:-1}, sort: "publishedAt:DESC") {
+      categoriaPodcasts(pagination: {start: 0, limit:-1}, sort: "updatedAt:DESC") {
         data{
           id
           attributes{
@@ -283,6 +291,14 @@ query getProgramPodcasts($slug: String!){
                       url
                       width
                       height
+                    }
+                  }
+                }
+                categoria_podcast{
+                  data{
+                    attributes{
+                      Titulo
+                      slug
                     }
                   }
                 }
@@ -319,7 +335,7 @@ const GET_AUTORS = gql`
 
 const GET_TAGS_SLUGS = gql`
     query getTagsSlugs{
-      tags(pagination: {start: 0, limit:-1}, sort: "publishedAt:DESC") {
+      tags(pagination: {start: 0, limit:-1}, sort: "updatedAt:DESC") {
         data{
           id
           attributes{

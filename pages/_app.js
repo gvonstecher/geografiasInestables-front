@@ -5,20 +5,20 @@ import PersistentPlayer from '@/components/PersistentPlayer';
 
 const old_Standard = Old_Standard_TT({
   subsets: ['latin'],
-  weight: ['400'],
+  weight: ['400','700'],
 });
 
 const martel = Martel({
   subsets: ['latin'],
-  weight: ['400','600'],
+  weight: ['400','600','700'],
 });
 const work = Work_Sans({
   subsets: ['latin'],
-  weight: [ '400', '500'],
+  weight: [ '400', '500','700'],
 });
 const noto = Noto_Sans({
   subsets: ['latin'],
-  weight: [ '500'],
+  weight: [ '500','700'],
 });
 
 export default function App({ Component, pageProps}) {

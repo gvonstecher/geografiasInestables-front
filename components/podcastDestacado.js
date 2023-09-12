@@ -7,12 +7,12 @@ export default function PodcastDestacado({ titulo, slug, categoria, descripcionC
 	return(
         <>
                             <article className='col-span-full bg-white rounded-lg p-12 flex drop-shadow-md'>
-								<div className='flex basis-1/2'>
-									<div className='flex flex-col justify-between me-3'>
+								<div className='flex basis-2/3'>
+									<div className='flex flex-col justify-between me-3 w-full'>
 										<div>
 										{(typeof categoria != "undefined" && typeof categoria != null && categoria !=null ) &&
                                                 <Link href={'/programas/'+categoria.attributes.slug}>
-                                                    <h3 className='text-light-green font-medium mb-2 font-work'>{categoria.attributes.Titulo}</h3>
+                                                    <h3 className='text-light-green font-medium mb-2 font-work uppercase'>{categoria.attributes.Titulo}</h3>
                                                 </Link>
                                             }
 											<Link href={'/podcasts/'+slug}>
@@ -31,8 +31,8 @@ export default function PodcastDestacado({ titulo, slug, categoria, descripcionC
 										</div>
 									</div>
 								</div>
-								<div className='basis-1/2'>
-								<Link href={'podcasts/'+slug}>
+								<div className='basis-1/3'>
+								<Link href={'/podcasts/'+slug}>
 									{(typeof imagenDestacada != "undefined" && typeof imagenDestacada != null && imagenDestacada !=null ) &&
 										<Image 
 											className='rounded-lg'

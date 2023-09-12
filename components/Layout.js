@@ -24,7 +24,7 @@ const Layout = ({ children = null }) => {
                 <header className="w-full drop-shadow-md z-10">
                 <nav className="container mx-auto flex items-center justify-between lg:px-8" aria-label="Global">
                     <div className="">
-                        <Link href="/" className="m-0 py-2 inline-block">
+                        <Link href="/" className="m-0 pt-2 pb-0 inline-block">
                             <span className="sr-only">Geografias Inestables</span>
                             <Image className="h-16 w-auto " src="/gi-logo.png" alt="Geografías Inestables" width={160} height={70} />
                         </Link>

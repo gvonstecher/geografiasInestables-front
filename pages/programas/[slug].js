@@ -16,7 +16,6 @@ export default function Notas({titulo,podcasts, backendUrl,onLoadPlayer}) {
     return (
         <>
             <Layout>
-            <h2 className='text-4xl font-medium mb-4'>{titulo}</h2>
                 <section id="home-podcasts" className="grid gap-8 font-martel">
                     {podcasts.map((podcast, i) => {
                         return (
@@ -25,6 +24,7 @@ export default function Notas({titulo,podcasts, backendUrl,onLoadPlayer}) {
                                 titulo={podcast.attributes.Titulo}
 								slug={podcast.attributes.slug}
 								descripcionCorta={podcast.attributes.DescripcionCorta}
+                                categoria={podcast.attributes.categoria_podcast.data}
 								duracion={podcast.attributes.Duracion}
 								link={podcast.attributes.Link}
 								imagenDestacada={podcast.attributes.ImagenDestacada.data}
@@ -65,7 +65,6 @@ export async function getStaticProps({ params }){
 
     return {
         props: {
-            titulo: data.categoriaPodcasts.data[0].attributes.Titulo,
             podcasts: data.categoriaPodcasts.data[0].attributes.podcasts.data,
             backendUrl: backendUrl
         },
