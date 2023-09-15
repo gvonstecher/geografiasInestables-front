@@ -400,7 +400,28 @@ query getTagsPosts($slug: String!) {
 }
 `;
 
-
+const GET_PLAYLISTS = gql`
+query getPlaylists{
+  playlists(pagination: {start: 0, limit:4}, sort: "updatedAt:DESC") {
+    data{
+      id
+      attributes{
+      	Titulo
+        DescripcionCorta
+        slug
+        Link
+        publishedAt
+        Imagen{
+          data{
+            attributes{
+                url
+            }
+          }
+        }
+      }
+    }
+  }
+}`;
 
   export { 
     GET_HOME_POSTS, 
@@ -414,5 +435,6 @@ query getTagsPosts($slug: String!) {
     GET_PROGRAM_PODCASTS,
     GET_AUTORS,
     GET_TAGS_SLUGS,
-    GET_TAG_POSTS
+    GET_TAG_POSTS,
+    GET_PLAYLISTS
   };

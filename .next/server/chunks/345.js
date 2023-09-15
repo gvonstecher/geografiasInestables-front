@@ -336,7 +336,7 @@ const NavMenu = ({ section  })=>{
     let icon = "";
     let baseUrl = "";
     if (section == "notas") {
-        apiUrl = "http://139.177.206.94:1337" + "/api/categoria-notas";
+        apiUrl = "http://localhost:1337" + "/api/categoria-notas";
         baseUrl = "/secciones/";
         tituloSeccion = "Notas";
         icon = `<i className="px-2">
@@ -350,7 +350,7 @@ const NavMenu = ({ section  })=>{
             </svg>
         </i>`;
     } else {
-        apiUrl = "http://139.177.206.94:1337" + "/api/categoria-podcasts";
+        apiUrl = "http://localhost:1337" + "/api/categoria-podcasts";
         tituloSeccion = "Podcasts";
         baseUrl = "/programas/";
         icon = `<i className="px-2">

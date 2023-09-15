@@ -13,6 +13,7 @@ exports.modules = {
 /* harmony export */   "Ix": () => (/* binding */ GET_SECTION_ARTICLES),
 /* harmony export */   "K7": () => (/* binding */ GET_PROGRAMS_SLUGS),
 /* harmony export */   "Rh": () => (/* binding */ GET_ARTICLE),
+/* harmony export */   "Um": () => (/* binding */ GET_PLAYLISTS),
 /* harmony export */   "Z5": () => (/* binding */ GET_HOME_POSTS),
 /* harmony export */   "ZK": () => (/* binding */ GET_AUTORS),
 /* harmony export */   "hb": () => (/* binding */ GET_PROGRAM_PODCASTS),
@@ -406,6 +407,28 @@ query getTagsPosts($slug: String!) {
   }
 }
 `;
+const GET_PLAYLISTS = _apollo_client__WEBPACK_IMPORTED_MODULE_0__.gql`
+query getPlaylists{
+  playlists(pagination: {start: 0, limit:4}, sort: "updatedAt:DESC") {
+    data{
+      id
+      attributes{
+      	Titulo
+        DescripcionCorta
+        slug
+        Link
+        publishedAt
+        Imagen{
+          data{
+            attributes{
+                url
+            }
+          }
+        }
+      }
+    }
+  }
+}`;
 
 
 

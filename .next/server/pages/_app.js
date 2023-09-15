@@ -4,7 +4,7 @@ exports.id = 888;
 exports.ids = [888];
 exports.modules = {
 
-/***/ 4927:
+/***/ 163:
 /***/ ((module) => {
 
 // Exports
@@ -16,7 +16,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 5776:
+/***/ 7631:
 /***/ ((module) => {
 
 // Exports
@@ -28,7 +28,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 7733:
+/***/ 5154:
 /***/ ((module) => {
 
 // Exports
@@ -40,13 +40,13 @@ module.exports = {
 
 /***/ }),
 
-/***/ 6342:
+/***/ 619:
 /***/ ((module) => {
 
 // Exports
 module.exports = {
-	"style": {"fontFamily":"'__Work_Sans_f70dd4', '__Work_Sans_Fallback_f70dd4'","fontStyle":"normal"},
-	"className": "__className_f70dd4"
+	"style": {"fontFamily":"'__Work_Sans_3b8230', '__Work_Sans_Fallback_3b8230'","fontStyle":"normal"},
+	"className": "__className_3b8230"
 };
 
 
@@ -67,18 +67,18 @@ __webpack_require__.d(__webpack_exports__, {
 
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
-// EXTERNAL MODULE: ./node_modules/next/font/google/target.css?{"path":"pages\\_app.js","import":"Old_Standard_TT","arguments":[{"subsets":["latin"],"weight":["400","700"]}],"variableName":"old_Standard"}
-var target_path_pages_app_js_import_Old_Standard_TT_arguments_subsets_latin_weight_400_700_variableName_old_Standard_ = __webpack_require__(7733);
-var target_path_pages_app_js_import_Old_Standard_TT_arguments_subsets_latin_weight_400_700_variableName_old_Standard_default = /*#__PURE__*/__webpack_require__.n(target_path_pages_app_js_import_Old_Standard_TT_arguments_subsets_latin_weight_400_700_variableName_old_Standard_);
-// EXTERNAL MODULE: ./node_modules/next/font/google/target.css?{"path":"pages\\_app.js","import":"Martel","arguments":[{"subsets":["latin"],"weight":["400","600","700"]}],"variableName":"martel"}
-var target_path_pages_app_js_import_Martel_arguments_subsets_latin_weight_400_600_700_variableName_martel_ = __webpack_require__(4927);
-var target_path_pages_app_js_import_Martel_arguments_subsets_latin_weight_400_600_700_variableName_martel_default = /*#__PURE__*/__webpack_require__.n(target_path_pages_app_js_import_Martel_arguments_subsets_latin_weight_400_600_700_variableName_martel_);
-// EXTERNAL MODULE: ./node_modules/next/font/google/target.css?{"path":"pages\\_app.js","import":"Work_Sans","arguments":[{"subsets":["latin"],"weight":["400","500","700"]}],"variableName":"work"}
-var target_path_pages_app_js_import_Work_Sans_arguments_subsets_latin_weight_400_500_700_variableName_work_ = __webpack_require__(6342);
-var target_path_pages_app_js_import_Work_Sans_arguments_subsets_latin_weight_400_500_700_variableName_work_default = /*#__PURE__*/__webpack_require__.n(target_path_pages_app_js_import_Work_Sans_arguments_subsets_latin_weight_400_500_700_variableName_work_);
-// EXTERNAL MODULE: ./node_modules/next/font/google/target.css?{"path":"pages\\_app.js","import":"Noto_Sans","arguments":[{"subsets":["latin"],"weight":["500","700"]}],"variableName":"noto"}
-var target_path_pages_app_js_import_Noto_Sans_arguments_subsets_latin_weight_500_700_variableName_noto_ = __webpack_require__(5776);
-var target_path_pages_app_js_import_Noto_Sans_arguments_subsets_latin_weight_500_700_variableName_noto_default = /*#__PURE__*/__webpack_require__.n(target_path_pages_app_js_import_Noto_Sans_arguments_subsets_latin_weight_500_700_variableName_noto_);
+// EXTERNAL MODULE: ./node_modules/next/font/google/target.css?{"path":"pages/_app.js","import":"Old_Standard_TT","arguments":[{"subsets":["latin"],"weight":["400","700"]}],"variableName":"old_Standard"}
+var _app_js_import_Old_Standard_TT_arguments_subsets_latin_weight_400_700_variableName_old_Standard_ = __webpack_require__(5154);
+var _app_js_import_Old_Standard_TT_arguments_subsets_latin_weight_400_700_variableName_old_Standard_default = /*#__PURE__*/__webpack_require__.n(_app_js_import_Old_Standard_TT_arguments_subsets_latin_weight_400_700_variableName_old_Standard_);
+// EXTERNAL MODULE: ./node_modules/next/font/google/target.css?{"path":"pages/_app.js","import":"Martel","arguments":[{"subsets":["latin"],"weight":["400","600","700"]}],"variableName":"martel"}
+var _app_js_import_Martel_arguments_subsets_latin_weight_400_600_700_variableName_martel_ = __webpack_require__(163);
+var _app_js_import_Martel_arguments_subsets_latin_weight_400_600_700_variableName_martel_default = /*#__PURE__*/__webpack_require__.n(_app_js_import_Martel_arguments_subsets_latin_weight_400_600_700_variableName_martel_);
+// EXTERNAL MODULE: ./node_modules/next/font/google/target.css?{"path":"pages/_app.js","import":"Work_Sans","arguments":[{"subsets":["latin"],"weight":["400","500","700"]}],"variableName":"work"}
+var _app_js_import_Work_Sans_arguments_subsets_latin_weight_400_500_700_variableName_work_ = __webpack_require__(619);
+var _app_js_import_Work_Sans_arguments_subsets_latin_weight_400_500_700_variableName_work_default = /*#__PURE__*/__webpack_require__.n(_app_js_import_Work_Sans_arguments_subsets_latin_weight_400_500_700_variableName_work_);
+// EXTERNAL MODULE: ./node_modules/next/font/google/target.css?{"path":"pages/_app.js","import":"Noto_Sans","arguments":[{"subsets":["latin"],"weight":["500","700"]}],"variableName":"noto"}
+var _app_js_import_Noto_Sans_arguments_subsets_latin_weight_500_700_variableName_noto_ = __webpack_require__(7631);
+var _app_js_import_Noto_Sans_arguments_subsets_latin_weight_500_700_variableName_noto_default = /*#__PURE__*/__webpack_require__.n(_app_js_import_Noto_Sans_arguments_subsets_latin_weight_500_700_variableName_noto_);
 ;// CONCATENATED MODULE: external "styled-jsx/style"
 const style_namespaceObject = require("styled-jsx/style");
 var style_default = /*#__PURE__*/__webpack_require__.n(style_namespaceObject);
@@ -91,7 +91,7 @@ var globals = __webpack_require__(6764);
 const PersistentPlayer = ({ src  })=>{
     return /*#__PURE__*/ jsx_runtime.jsx(jsx_runtime.Fragment, {
         children: /*#__PURE__*/ jsx_runtime.jsx("div", {
-            className: "content fixed bottom-0 w-full bg-dark-green max-h-48",
+            className: "fixed bottom-0 w-full bg-dark-green max-h-48",
             dangerouslySetInnerHTML: {
                 __html: src
             }
@@ -120,12 +120,12 @@ function App({ Component , pageProps  }) {
             jsx_runtime.jsx((style_default()), {
                 id: "7417e07a9cf85c4",
                 dynamic: [
-                    (target_path_pages_app_js_import_Old_Standard_TT_arguments_subsets_latin_weight_400_700_variableName_old_Standard_default()).style.fontFamily,
-                    (target_path_pages_app_js_import_Martel_arguments_subsets_latin_weight_400_600_700_variableName_martel_default()).style.fontFamily,
-                    (target_path_pages_app_js_import_Work_Sans_arguments_subsets_latin_weight_400_500_700_variableName_work_default()).style.fontFamily,
-                    (target_path_pages_app_js_import_Noto_Sans_arguments_subsets_latin_weight_500_700_variableName_noto_default()).style.fontFamily
+                    (_app_js_import_Old_Standard_TT_arguments_subsets_latin_weight_400_700_variableName_old_Standard_default()).style.fontFamily,
+                    (_app_js_import_Martel_arguments_subsets_latin_weight_400_600_700_variableName_martel_default()).style.fontFamily,
+                    (_app_js_import_Work_Sans_arguments_subsets_latin_weight_400_500_700_variableName_work_default()).style.fontFamily,
+                    (_app_js_import_Noto_Sans_arguments_subsets_latin_weight_500_700_variableName_noto_default()).style.fontFamily
                 ],
-                children: `:root{--font-old_standard:${(target_path_pages_app_js_import_Old_Standard_TT_arguments_subsets_latin_weight_400_700_variableName_old_Standard_default()).style.fontFamily};--font-martel:${(target_path_pages_app_js_import_Martel_arguments_subsets_latin_weight_400_600_700_variableName_martel_default()).style.fontFamily};--font-work:${(target_path_pages_app_js_import_Work_Sans_arguments_subsets_latin_weight_400_500_700_variableName_work_default()).style.fontFamily};--font-noto:${(target_path_pages_app_js_import_Noto_Sans_arguments_subsets_latin_weight_500_700_variableName_noto_default()).style.fontFamily}}`
+                children: `:root{--font-old_standard:${(_app_js_import_Old_Standard_TT_arguments_subsets_latin_weight_400_700_variableName_old_Standard_default()).style.fontFamily};--font-martel:${(_app_js_import_Martel_arguments_subsets_latin_weight_400_600_700_variableName_martel_default()).style.fontFamily};--font-work:${(_app_js_import_Work_Sans_arguments_subsets_latin_weight_400_500_700_variableName_work_default()).style.fontFamily};--font-noto:${(_app_js_import_Noto_Sans_arguments_subsets_latin_weight_500_700_variableName_noto_default()).style.fontFamily}}`
             }),
             /*#__PURE__*/ jsx_runtime.jsx(Component, {
                 ...pageProps,
@@ -134,10 +134,10 @@ function App({ Component , pageProps  }) {
                     [
                         "7417e07a9cf85c4",
                         [
-                            (target_path_pages_app_js_import_Old_Standard_TT_arguments_subsets_latin_weight_400_700_variableName_old_Standard_default()).style.fontFamily,
-                            (target_path_pages_app_js_import_Martel_arguments_subsets_latin_weight_400_600_700_variableName_martel_default()).style.fontFamily,
-                            (target_path_pages_app_js_import_Work_Sans_arguments_subsets_latin_weight_400_500_700_variableName_work_default()).style.fontFamily,
-                            (target_path_pages_app_js_import_Noto_Sans_arguments_subsets_latin_weight_500_700_variableName_noto_default()).style.fontFamily
+                            (_app_js_import_Old_Standard_TT_arguments_subsets_latin_weight_400_700_variableName_old_Standard_default()).style.fontFamily,
+                            (_app_js_import_Martel_arguments_subsets_latin_weight_400_600_700_variableName_martel_default()).style.fontFamily,
+                            (_app_js_import_Work_Sans_arguments_subsets_latin_weight_400_500_700_variableName_work_default()).style.fontFamily,
+                            (_app_js_import_Noto_Sans_arguments_subsets_latin_weight_500_700_variableName_noto_default()).style.fontFamily
                         ]
                     ]
                 ]) + " " + (pageProps && pageProps.className != null && pageProps.className || "")
