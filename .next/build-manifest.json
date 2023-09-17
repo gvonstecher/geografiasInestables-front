@@ -5,8 +5,8 @@
   "devFiles": [],
   "ampDevFiles": [],
   "lowPriorityFiles": [
-    "static/B4pkD7ABCEtqExJ426Lz1/_buildManifest.js",
-    "static/B4pkD7ABCEtqExJ426Lz1/_ssgManifest.js"
+    "static/rmC8-fqPgo7vFT5gZYBao/_buildManifest.js",
+    "static/rmC8-fqPgo7vFT5gZYBao/_ssgManifest.js"
   ],
   "rootMainFiles": [],
   "pages": {
@@ -22,7 +22,7 @@
       "static/chunks/webpack-6ef43a8d4a395f49.js",
       "static/chunks/framework-2c79e2a64abdb08b.js",
       "static/chunks/main-9c8fd354a6242c23.js",
-      "static/css/7339ac081b0f356c.css",
+      "static/css/7376ac2798c461f3.css",
       "static/chunks/pages/_app-86c9987cc99b7b87.js"
     ],
     "/_error": [
@@ -78,8 +78,9 @@
       "static/chunks/main-9c8fd354a6242c23.js",
       "static/chunks/103-39c38c035ddd8855.js",
       "static/chunks/480-034b01f2248ab24d.js",
+      "static/chunks/818-02f206b9883e405e.js",
       "static/chunks/16-9e25ec5bb9e64c50.js",
-      "static/chunks/pages/notas/[slug]-0f623ec976805d80.js"
+      "static/chunks/pages/notas/[slug]-348a0b04b491b865.js"
     ],
     "/podcasts/[slug]": [
       "static/chunks/webpack-6ef43a8d4a395f49.js",
