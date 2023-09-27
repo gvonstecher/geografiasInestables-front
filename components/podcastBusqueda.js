@@ -7,7 +7,7 @@ export default function PodcastDestacado({ titulo, slug, categoria, descripcionC
 	return(
         <>
                             <article className='col-span-full bg-white rounded-lg p-12 flex drop-shadow-md'>
-								<div className='flex basis-1/2'>
+								<div className='flex basis-3/5'>
 									<div className='flex flex-col justify-between me-3'>
 										<div>
 										{(typeof categoria != "undefined" && typeof categoria != null && categoria !=null ) &&
@@ -31,15 +31,16 @@ export default function PodcastDestacado({ titulo, slug, categoria, descripcionC
 										</div>
 									</div>
 								</div>
-								<div className='basis-1/2'>
+								<div className='basis-2/5'>
 								<Link href={'podcasts/'+slug}>
 									{(typeof imagenDestacada != "undefined" && typeof imagenDestacada != null && imagenDestacada !=null ) &&
 										<Image 
 											className='rounded-lg'
 											src={backendUrl+imagenDestacada} 
 											alt={titulo}
+											layout="responsive"
 											width={700}
-											height={500}
+											height={420}
 										/>
 									}
 								</Link>

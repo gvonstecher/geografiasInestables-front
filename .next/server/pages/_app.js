@@ -88,15 +88,33 @@ var external_react_ = __webpack_require__(6689);
 var globals = __webpack_require__(6764);
 ;// CONCATENATED MODULE: ./components/PersistentPlayer.js
 
+
 const PersistentPlayer = ({ src  })=>{
-    return /*#__PURE__*/ jsx_runtime.jsx(jsx_runtime.Fragment, {
-        children: /*#__PURE__*/ jsx_runtime.jsx("div", {
-            className: "fixed bottom-0 w-full bg-dark-green max-h-48",
-            dangerouslySetInnerHTML: {
-                __html: src
-            }
-        })
-    });
+    const [showMe, setShowMe] = (0,external_react_.useState)(false);
+    function toggleVisibilty() {
+        setShowMe(!showMe);
+    }
+    if (src) {
+        return /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
+            className: `fixed bottom-0 w-full z-40 ${showMe ? "h-20" : "min-h-min"}`,
+            children: [
+                /*#__PURE__*/ jsx_runtime.jsx("button", {
+                    className: "absolute top-3 right-3 z-50 rounded-full p-4 text-2xl font-bold bg-black",
+                    onClick: toggleVisibilty,
+                    children: /*#__PURE__*/ jsx_runtime.jsx("div", {
+                        className: `h-0 w-0 border-x-8 border-x-transparent ${showMe ? "border-b-[16px] border-b-white-600" : "border-t-[16px] border-t-white-600"}`
+                    })
+                }),
+                /*#__PURE__*/ jsx_runtime.jsx("div", {
+                    id: "persistentPlayer",
+                    className: `max-h-48 bg-dark-green ${showMe ? "hidden" : "block"}`,
+                    dangerouslySetInnerHTML: {
+                        __html: src
+                    }
+                })
+            ]
+        });
+    }
 };
 /* harmony default export */ const components_PersistentPlayer = (PersistentPlayer);
 

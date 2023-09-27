@@ -28,7 +28,7 @@ function PodcastDestacado({ titulo , slug , categoria , descripcionCorta , durac
             className: "col-span-full bg-white rounded-lg p-12 flex drop-shadow-md",
             children: [
                 /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
-                    className: "flex basis-2/3",
+                    className: "flex basis-3/5",
                     children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
                         className: "flex flex-col justify-between me-3 w-full",
                         children: [
@@ -68,15 +68,16 @@ function PodcastDestacado({ titulo , slug , categoria , descripcionCorta , durac
                     })
                 }),
                 /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
-                    className: "basis-1/3",
+                    className: "basis-2/5",
                     children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_2___default()), {
                         href: "/podcasts/" + slug,
                         children: typeof imagenDestacada != "undefined" && typeof imagenDestacada != null && imagenDestacada != null && /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_image__WEBPACK_IMPORTED_MODULE_1___default()), {
                             className: "rounded-lg",
                             src: backendUrl + imagenDestacada.attributes.url,
                             alt: titulo,
+                            layout: "responsive",
                             width: 700,
-                            height: 500
+                            height: 420
                         })
                     })
                 })

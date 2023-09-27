@@ -103,7 +103,8 @@ body {
   font-family: var(--);
 }
 
-header{
+header,
+#mobile-menu{
   background: var(--header-rgb);
 }
 

@@ -50,7 +50,7 @@ function NotaDestacada({ titulo , slug , categoria , descripcionCorta , cuerpo ,
             className: "col-span-full bg-white rounded-lg p-12 flex drop-shadow-md",
             children: [
                 /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
-                    className: "flex basis-1/2",
+                    className: "flex basis-3/5",
                     children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
                         className: "flex flex-col justify-between me-3",
                         children: [
@@ -86,14 +86,15 @@ function NotaDestacada({ titulo , slug , categoria , descripcionCorta , cuerpo ,
                     })
                 }),
                 /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
-                    className: "basis-1/2",
+                    className: "basis-2/5",
                     children: typeof imagenDestacada != "undefined" && typeof imagenDestacada != null && imagenDestacada != null && /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_2___default()), {
                         href: "/notas/" + slug,
                         children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_image__WEBPACK_IMPORTED_MODULE_1___default()), {
                             src: backendUrl + imagenDestacada,
                             alt: titulo,
+                            layout: "responsive",
                             width: 700,
-                            height: 500,
+                            height: 420,
                             priority: true
                         })
                     })
@@ -131,7 +132,7 @@ function PodcastDestacado({ titulo , slug , categoria , descripcionCorta , durac
             className: "col-span-full bg-white rounded-lg p-12 flex drop-shadow-md",
             children: [
                 /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
-                    className: "flex basis-1/2",
+                    className: "flex basis-3/5",
                     children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
                         className: "flex flex-col justify-between me-3",
                         children: [
@@ -171,15 +172,16 @@ function PodcastDestacado({ titulo , slug , categoria , descripcionCorta , durac
                     })
                 }),
                 /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
-                    className: "basis-1/2",
+                    className: "basis-2/5",
                     children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_2___default()), {
                         href: "podcasts/" + slug,
                         children: typeof imagenDestacada != "undefined" && typeof imagenDestacada != null && imagenDestacada != null && /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_image__WEBPACK_IMPORTED_MODULE_1___default()), {
                             className: "rounded-lg",
                             src: backendUrl + imagenDestacada,
                             alt: titulo,
+                            layout: "responsive",
                             width: 700,
-                            height: 500
+                            height: 420
                         })
                     })
                 })
@@ -588,6 +590,13 @@ module.exports = require("react");
 
 /***/ }),
 
+/***/ 6405:
+/***/ ((module) => {
+
+module.exports = require("react-dom");
+
+/***/ }),
+
 /***/ 1185:
 /***/ ((module) => {
 
@@ -602,7 +611,7 @@ module.exports = import("@headlessui/react");;
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [893,636,61,345,130,833,661], () => (__webpack_exec__(3774)));
+var __webpack_exports__ = __webpack_require__.X(0, [893,636,402,345,130,833,661], () => (__webpack_exec__(3774)));
 module.exports = __webpack_exports__;
 
 })();

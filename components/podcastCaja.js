@@ -12,8 +12,9 @@ export default function PodcastCaja({ titulo, slug, categoria, duracion, link, i
 										<Image 
 											className='object-cover h-60 w-full rounded-t-lg' 
 											src={backendUrl+imagenDestacada.attributes.url}
-											width={400}
-											height={250} 
+											layout="responsive"
+											width={300}
+											height={200}
 											alt={titulo}
 										/>
 									}

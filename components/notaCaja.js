@@ -10,8 +10,9 @@ export default function NotaCaja({ titulo, slug, categoria, cuerpo, imagenDestac
 									<Image 
 										className='object-cover h-60 w-full rounded-t-lg' 
 										src={backendUrl+imagenDestacada.attributes.url}
+										layout="responsive"
 										width={400}
-										height={250} 
+										height={225} 
 										alt={titulo}
 									/>
 								</Link>
