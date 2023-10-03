@@ -25,7 +25,7 @@ function TiempoDeLectura({ cuerpo  }) {
         cuerpo
     ]);
     return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-        className: "border-t border-dark-green pt-2 text-lg text-gray-800",
+        className: "border-t border-green pt-2 text-lg text-gray-800",
         children: [
             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("i", {
                 className: "inline w-3 h-3",

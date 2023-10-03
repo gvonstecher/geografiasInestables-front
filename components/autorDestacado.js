@@ -5,8 +5,8 @@ import Link from 'next/link';
 export default function autorDestacado({ nombre,slug,descripcion,foto, backendUrl }) {
     return(
         <>
-            				<article className='flex py-6 border-b border-dark-green grow' >
-                                        <div className='basis-1/3 text-center'>
+            				<article className='flex flex-col md:flex-row py-6 grow' >
+                                        <div className='basis-1/3 text-center mb-3'>
                                             <Link href={'/autores/'+slug}>
                                                 <Image 
                                                     className='inline rounded-full me-2 object-cover w-40 h-40'

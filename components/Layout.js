@@ -6,6 +6,7 @@ import Script from 'next/script'
 
 import React, { useState } from 'react';
 import NavMenu from '@/components/NavMenu';
+import NavBar from '@/components/navBar';
 
 const Layout = ({ children = null }) => {
     const [playerSource, setPlayerSource] = useState('');
@@ -20,139 +21,12 @@ const Layout = ({ children = null }) => {
             <Head>
                 <title>Geografías Inestables</title>
                 <link rel="icon" href="/favicon.ico" />
-                <script type="text/javascript" src="/hamburguer.js" async></script>
+                <link rel="stylesheet" type="text/css" charset="UTF-8" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" /> 
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
             </Head>
             <div className="min-h-screen flex flex-col">
-                <header className="">
-                    <nav className="container relative  mx-auto flex items-center w-full drop-shadow-md z-10 justify-between lg:px-8" aria-label="Global">
-                        <div className="">
-                            <Link href="/" className="m-0 pt-2 pb-0 inline-block">
-                                <span className="sr-only">Geografias Inestables</span>
-                                <Image className="h-16 w-auto " src="/gi-logo.png" alt="Geografías Inestables" width={160} height={70} />
-                            </Link>
-                        </div>
-                        <div className="lg:hidden">
-                            <button className="navbar-burger flex items-center text-blue-600 p-3">
-                                <img src="/menu.svg" className="h-12 w-12" />
-                            </button>
-                        </div>
-                        <ul className="hidden lg:flex text-xl lg:gap-x-12">
-                            <li>
-                                <NavMenu section="podcasts"/>
-                            </li>
-                            <li>
-                                <NavMenu section="notas"/>
-                            </li>
-                            <li>
-                                <Link href="/musica" className="flex items-center">
-                                    <i className="px-2">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                            <g clipPath="url(#clip0_33_288)">
-                                            <path opacity="0.3" d="M10.0098 19C11.1143 19 12.0098 18.1046 12.0098 17C12.0098 15.8954 11.1143 15 10.0098 15C8.9052 15 8.00977 15.8954 8.00977 17C8.00977 18.1046 8.9052 19 10.0098 19Z" fill="black"/>
-                                            <path d="M12 3L12.01 13.55C11.42 13.21 10.74 13 10.01 13C7.79 13 6 14.79 6 17C6 19.21 7.79 21 10.01 21C12.23 21 14 19.21 14 17V7H18V3H12ZM10.01 19C8.91 19 8.01 18.1 8.01 17C8.01 15.9 8.91 15 10.01 15C11.11 15 12.01 15.9 12.01 17C12.01 18.1 11.11 19 10.01 19Z" fill="black"/>
-                                            </g>
-                                            <defs>
-                                            <clipPath id="clip0_33_288">
-                                            <rect width="24" height="24" fill="white"/>
-                                            </clipPath>
-                                            </defs>
-                                        </svg>
-                                    </i>
-                                    Musica
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="/busqueda" className="flex items-center">
-                                    <i className="px-2">
-                                        <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 20 20"
-                                            fill="currentColor"
-                                            className="h-5 w-5">
-                                            <path
-                                            fillRule="evenodd"
-                                            d="M9 3.5a5.5 5.5 0 100 11 5.5 5.5 0 000-11zM2 9a7 7 0 1112.452 4.391l3.328 3.329a.75.75 0 11-1.06 1.06l-3.329-3.328A7 7 0 012 9z"
-                                            clipRule="evenodd" />
-                                        </svg>
-                                    </i>
-                                    Buscar
-                                </Link>
-                            </li>
-                        </ul>
-                    </nav>
-                    <div className="navbar-menu relative z-50 hidden">
-                        <div className="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
-                        <nav id='mobile-menu' className="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 border-r overflow-y-auto">
-                            <div className="flex items-center mb-8">
-                                <Link href="/" className="mr-auto pt-2 pb-0 inline-block">
-                                    <span className="sr-only">Geografias Inestables</span>
-                                    <Image className="h-16 w-auto " src="/gi-logo.png" alt="Geografías Inestables" width={160} height={70} />
-                                </Link>
-                                <button className="navbar-close">
-                                    <svg className="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
-                                    </svg>
-                                </button>
-                            </div>
-                            <div>
-                                <ul>
-                                    <li>
-                                        <NavMenu section="podcasts"/>
-                                    </li>
-                                    <li>
-                                        <NavMenu section="notas"/>
-                                    </li>
-                                    <li>
-                                        <Link href="/musica" className="flex items-center">
-                                            <i className="px-2">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                                    <g clipPath="url(#clip0_33_288)">
-                                                    <path opacity="0.3" d="M10.0098 19C11.1143 19 12.0098 18.1046 12.0098 17C12.0098 15.8954 11.1143 15 10.0098 15C8.9052 15 8.00977 15.8954 8.00977 17C8.00977 18.1046 8.9052 19 10.0098 19Z" fill="black"/>
-                                                    <path d="M12 3L12.01 13.55C11.42 13.21 10.74 13 10.01 13C7.79 13 6 14.79 6 17C6 19.21 7.79 21 10.01 21C12.23 21 14 19.21 14 17V7H18V3H12ZM10.01 19C8.91 19 8.01 18.1 8.01 17C8.01 15.9 8.91 15 10.01 15C11.11 15 12.01 15.9 12.01 17C12.01 18.1 11.11 19 10.01 19Z" fill="black"/>
-                                                    </g>
-                                                    <defs>
-                                                    <clipPath id="clip0_33_288">
-                                                    <rect width="24" height="24" fill="white"/>
-                                                    </clipPath>
-                                                    </defs>
-                                                </svg>
-                                            </i>
-                                            Musica
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/busqueda" className="flex items-center">
-                                            <i className="px-2">
-                                                <svg
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                    viewBox="0 0 20 20"
-                                                    fill="currentColor"
-                                                    className="h-5 w-5">
-                                                    <path
-                                                    fillRule="evenodd"
-                                                    d="M9 3.5a5.5 5.5 0 100 11 5.5 5.5 0 000-11zM2 9a7 7 0 1112.452 4.391l3.328 3.329a.75.75 0 11-1.06 1.06l-3.329-3.328A7 7 0 012 9z"
-                                                    clipRule="evenodd" />
-                                                </svg>
-                                            </i>
-                                            Buscar
-                                        </Link>
-                                    </li>
-                                    <li className="mb-1">
-                                        <a className="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded" href="#">Home</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div className="mt-auto">
-                                <div className="pt-6">
-                                    <a className="block px-4 py-3 mb-3 leading-loose text-xs text-center font-semibold leading-none bg-gray-50 hover:bg-gray-100 rounded-xl" href="#">Sign in</a>
-                                    <a className="block px-4 py-3 mb-2 leading-loose text-xs text-center text-white font-semibold bg-blue-600 hover:bg-blue-700  rounded-xl" href="#">Sign Up</a>
-                                </div>
-                                <p className="my-4 text-xs text-center text-gray-400">
-                                    <span>Copyright © 2021</span>
-                                </p>
-                            </div>
-                        </nav>
-                    </div>
+                <header className="shadow-[0_4px_4px_-0px_rgba(0,0,0,0.25)]">
+                    <NavBar />
                 </header>
                 <main className="flex-grow container mx-auto">
                     <div className="px-4 py-12">
@@ -164,7 +38,7 @@ const Layout = ({ children = null }) => {
                     <div className='container text-center mx-auto'>
                         <a href="#" className="m-0 py-2 inline-block">
                             <span className="sr-only">Geografias Inestables</span>
-                            <Image className="h-16 w-auto " src="/gi-logo.png" alt="Geografías Inestables" width={160} height={70} />
+                            <Image className="h-[70px] w-auto  w-auto "  src="/gi-logo-v2.png" alt="Geografías Inestables" width={160} height={70} />
                         </a>
                         <div className='flex w-auto justify-center py-2 gap-10'>
                             <a href='#'>
@@ -197,7 +71,7 @@ const Layout = ({ children = null }) => {
                             </a>
                         </div>
 
-                        <hr className="h-px my-8 bg-dark-green border-0 drop-shadow"></hr>
+                        <hr className="h-px my-8 bg-green border-0 shadow-[0_4px_4px_-0px_rgba(0,0,0,0.25)]"></hr>
                         <p>                                                      © Copyright TitanSol. Todos los derechos reservados | <Link href="/acerca-de" className='underline'>Acerca de Geograsfías Inestables</Link> | <Link href="/politicas-de-privacidad" className='underline'>Política de privacidad</Link> | <Link href="/terminos-y-condiciones" className='underline'>Términos y Condiciones</Link></p>
                     </div>
                 </footer>

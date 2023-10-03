@@ -7,8 +7,8 @@ const backendUrl = process.env.STRAPIBASEURL;
 export default function NotaDestacada({ titulo, slug, categoria, descripcionCorta, cuerpo, imagenDestacada, backendUrl }) {
 	return(
         <>
-            <article className='col-span-full bg-white rounded-lg p-12 pl-20 flex drop-shadow-md'>
-				<div className='flex basis-3/5'> 
+            <article className='col-span-full bg-white rounded-lg p-5 flex drop-shadow-md flex-col-reverse md:flex-row md:p-12 md:pl-20 '>
+				<div className='flex basis-3/5 mt-4 md:mt-0'> 
 					<div className='flex flex-col justify-between me-3'>
 						<div>
 											{(typeof categoria != "undefined" && typeof categoria != null && categoria !=null ) &&
@@ -33,6 +33,7 @@ export default function NotaDestacada({ titulo, slug, categoria, descripcionCort
 											src={backendUrl+imagenDestacada.attributes.url} 
 											alt={titulo}
 											layout="responsive"
+											className='rounded-md'
 											width={700}
 											height={420}
 											priority

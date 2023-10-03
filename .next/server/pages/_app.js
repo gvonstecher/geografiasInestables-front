@@ -96,7 +96,7 @@ const PersistentPlayer = ({ src  })=>{
     }
     if (src) {
         return /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
-            className: `fixed bottom-0 w-full z-40 ${showMe ? "h-20" : "min-h-min"}`,
+            className: `sticky bottom-0 w-full z-40 ${showMe ? "h-20" : "min-h-min"}`,
             children: [
                 /*#__PURE__*/ jsx_runtime.jsx("button", {
                     className: "absolute top-3 right-3 z-50 rounded-full p-4 text-2xl font-bold bg-black",
@@ -107,7 +107,7 @@ const PersistentPlayer = ({ src  })=>{
                 }),
                 /*#__PURE__*/ jsx_runtime.jsx("div", {
                     id: "persistentPlayer",
-                    className: `max-h-48 bg-dark-green ${showMe ? "hidden" : "block"}`,
+                    className: `bg-dark-green ${showMe ? "hidden" : "block"}`,
                     dangerouslySetInnerHTML: {
                         __html: src
                     }

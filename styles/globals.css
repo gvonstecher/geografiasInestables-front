@@ -92,7 +92,6 @@
 html,
 body {
   max-width: 100vw;
-  overflow-x: hidden;
   font-family: var(--font-work);
   font-size: 14px;
 }
@@ -100,7 +99,6 @@ body {
 body {
   color: rgb(var(--foreground-rgb));
   background: var(--background-rgb);
-  font-family: var(--);
 }
 
 header,
@@ -155,6 +153,32 @@ footer{
   height: 100%;
   margin: 15px 0px;
 }
+
+.slick-slide > div {
+  margin: 0 1.2em;
+}
+.slick-list {
+  margin: 0 -1.2em;
+}
+.slick-dots li{
+  width: 15px;
+  height: 15px;
+  margin:0 10px;
+}
+.slick-dots li button{
+  border-radius: 50%;
+  border: 1px solid #000;
+  box-shadow: 1px 4px 5px 0px rgba(0,0,0,0.49);
+-webkit-box-shadow: 1px 4px 5px 0px rgba(0,0,0,0.49);
+-moz-box-shadow: 1px 4px 5px 0px rgba(0,0,0,0.49);
+}
+.slick-dots li.slick-active button{
+  background-color: var(--green);
+}
+.slick-dots li button:before{
+  content:'';
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;

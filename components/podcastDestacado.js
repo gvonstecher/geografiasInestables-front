@@ -6,7 +6,7 @@ import PlayerButtonLg from '@/components/PlayerButtonLg';
 export default function PodcastDestacado({ titulo, slug, categoria, descripcionCorta, duracion, link, imagenDestacada, backendUrl, onLoadPlayer }) {
 	return(
         <>
-                            <article className='col-span-full bg-white rounded-lg p-12 flex drop-shadow-md'>
+                            <article className='col-span-full bg-white p-5 flex rounded-lg md:p-12 flex-col-reverse md:flex-row drop-shadow-md'>
 								<div className='flex basis-3/5'>
 									<div className='flex flex-col justify-between me-3 w-full'>
 										<div>
@@ -22,7 +22,7 @@ export default function PodcastDestacado({ titulo, slug, categoria, descripcionC
 												<Link href={'/podcasts/'+slug}>{descripcionCorta}</Link>
 											</div>
 										</div>
-										<div className='border-t border-dark-green pt-2 fonttext-lg text-gray-800'>
+										<div className='border-t border-green pt-2 fonttext-lg text-gray-800'>
 
 											<PlayerButtonLg 
 												duracion={duracion} 

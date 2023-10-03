@@ -25,7 +25,7 @@ exports.modules = {
 function PodcastDestacado({ titulo , slug , categoria , descripcionCorta , duracion , link , imagenDestacada , backendUrl , onLoadPlayer  }) {
     return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
         children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("article", {
-            className: "col-span-full bg-white rounded-lg p-12 flex drop-shadow-md",
+            className: "col-span-full bg-white p-5 flex rounded-lg md:p-12 flex-col-reverse md:flex-row drop-shadow-md",
             children: [
                 /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
                     className: "flex basis-3/5",
@@ -58,7 +58,7 @@ function PodcastDestacado({ titulo , slug , categoria , descripcionCorta , durac
                                 ]
                             }),
                             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
-                                className: "border-t border-dark-green pt-2 fonttext-lg text-gray-800",
+                                className: "border-t border-green pt-2 fonttext-lg text-gray-800",
                                 children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_PlayerButtonLg__WEBPACK_IMPORTED_MODULE_4__/* ["default"] */ .Z, {
                                     duracion: duracion,
                                     onClick: ()=>onLoadPlayer(link)

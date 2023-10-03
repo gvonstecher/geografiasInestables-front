@@ -1,21 +1,21 @@
-import React, { useState, useEffect } from 'react';
-import { Fragment } from 'react'
-import { Menu } from '@headlessui/react'
-import Link from 'next/link';
+import React, { useState, useEffect } from "react";
+import { Fragment } from "react";
+import { Menu } from "@headlessui/react";
+import Link from "next/link";
 
-const NavMenu = ({section}) => {
+const NavMenu = ({ section }) => {
   const [navLinks, setNavLinks] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  let apiUrl = '';
-  let tituloSeccion = '';
-  let icon = '';
-  let baseUrl = '';
+  let apiUrl = "";
+  let tituloSeccion = "";
+  let icon = "";
+  let baseUrl = "";
 
-  if(section == 'notas'){
-    apiUrl = process.env.NEXT_PUBLIC_API_BASEURL+'/api/categoria-notas';
-    baseUrl = '/secciones/';
-    tituloSeccion = 'Notas';
+  if (section == "notas") {
+    apiUrl = process.env.NEXT_PUBLIC_API_BASEURL + "/api/categoria-notas";
+    baseUrl = "/secciones/";
+    tituloSeccion = "Notas";
     icon = `<i className="px-2">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                 <mask id="mask0_86_135" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
@@ -26,11 +26,10 @@ const NavMenu = ({section}) => {
                 </g>
             </svg>
         </i>`;
-
   } else {
-    apiUrl = process.env.NEXT_PUBLIC_API_BASEURL+'/api/categoria-podcasts';
-    tituloSeccion = 'Podcasts';
-    baseUrl = '/programas/';
+    apiUrl = process.env.NEXT_PUBLIC_API_BASEURL + "/api/categoria-podcasts";
+    tituloSeccion = "Podcasts";
+    baseUrl = "/programas/";
     icon = `<i className="px-2">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                     <g clipPath="url(#clip0_86_134)">
@@ -43,7 +42,6 @@ const NavMenu = ({section}) => {
                     </defs>
                 </svg>
             </i>`;
-
   }
 
   useEffect(() => {
@@ -51,7 +49,7 @@ const NavMenu = ({section}) => {
     fetch(apiUrl)
       .then((response) => {
         if (!response.ok) {
-          throw new Error('Network response was not ok');
+          throw new Error("Network response was not ok");
         }
         return response.json();
       })
@@ -60,10 +58,10 @@ const NavMenu = ({section}) => {
         setLoading(false);
       })
       .catch((error) => {
-        setError('Error fetching data. Please try again later.');
+        setError("Error fetching data. Please try again later.");
         setLoading(false);
       });
-      // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   if (loading) {
@@ -76,31 +74,32 @@ const NavMenu = ({section}) => {
 
   return (
     <Menu as="div" className="relative inline-block text-left">
-        <Menu.Button className="inline-flex w-full justify-center items-center">
-            <div className="content pe-2" dangerouslySetInnerHTML={{__html: icon}}></div> {tituloSeccion}
-        </Menu.Button>
+      <Menu.Button className="inline-flex w-full justify-center items-center">
+        <div
+          className="content pe-2"
+          dangerouslySetInnerHTML={{ __html: icon }}
+        ></div>{" "}
+        {tituloSeccion}
+      </Menu.Button>
 
-        <Menu.Items className="absolute mt-5 origin-top-right divide-y divide-gray-100 rounded-md bg-header-rgb shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
-            {navLinks.map((link) => (
-                <Menu.Item key={link.id} as={Fragment}>
-                {({ active }) => (
-                  <Link
-                    href={baseUrl+link.attributes.slug}
-                    className={`${
-                      active ? 'bg-green text-white' : 'bg-white text-black'
-                    } group flex w-full items-center px-4 py-3 text-sm whitespace-nowrap`}
-                  >
-                    {link.attributes.Titulo}
-                  </Link>
-                )}
-                </Menu.Item>
-                ))}
-            </Menu.Items>
-        </Menu>
+      <Menu.Items className="absolute mt-5 origin-top-right divide-y divide-gray-100 rounded-md bg-header-rgb shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+        {navLinks.map((link) => (
+          <Menu.Item key={link.id} as={Fragment}>
+            {({ active }) => (
+              <Link
+                href={baseUrl + link.attributes.slug}
+                className={`${
+                  active ? "bg-green text-white" : "bg-white text-black"
+                } group flex w-full items-center px-4 py-3 text-sm whitespace-nowrap`}
+              >
+                {link.attributes.Titulo}
+              </Link>
+            )}
+          </Menu.Item>
+        ))}
+      </Menu.Items>
+    </Menu>
   );
 };
 
 export default NavMenu;
-
-
-

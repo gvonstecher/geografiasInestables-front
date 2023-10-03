@@ -13,7 +13,7 @@ const PlayerButtonSm = ({ duracion = null, onClick}) => {
             className='bg-green hover:bg-dark-green text-white font-noto rounded-full p-4 flex'
             onClick={handleButtonClick}
         >
-			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" className='pl-1'>
 				<rect width="24" height="24" />
 				<path d="M5 3L19 12L5 21V3Z" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
 			</svg>

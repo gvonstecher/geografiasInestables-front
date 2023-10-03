@@ -17,9 +17,11 @@ exports.modules = {
 /* harmony export */   "Z5": () => (/* binding */ GET_HOME_POSTS),
 /* harmony export */   "ZK": () => (/* binding */ GET_AUTORS),
 /* harmony export */   "hb": () => (/* binding */ GET_PROGRAM_PODCASTS),
+/* harmony export */   "m_": () => (/* binding */ GET_AUTOR_POSTS),
 /* harmony export */   "n": () => (/* binding */ GET_ARTICLE_SLUGS),
 /* harmony export */   "rd": () => (/* binding */ GET_PODCASTS_SLUGS),
-/* harmony export */   "yS": () => (/* binding */ GET_SECTION_SLUGS)
+/* harmony export */   "yS": () => (/* binding */ GET_SECTION_SLUGS),
+/* harmony export */   "zR": () => (/* binding */ GET_AUTORS_SLUGS)
 /* harmony export */ });
 /* harmony import */ var _apollo_client__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(9114);
 /* harmony import */ var _apollo_client__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_apollo_client__WEBPACK_IMPORTED_MODULE_0__);
@@ -214,6 +216,7 @@ const GET_PODCAST = _apollo_client__WEBPACK_IMPORTED_MODULE_0__.gql`
             data{
               attributes{
                 Tag
+                slug
               }
             }
           }
@@ -360,6 +363,81 @@ query getTagsPosts($slug: String!) {
     data {
       attributes {
         Tag
+        slug
+        notas (sort: "createdAt:desc"){
+          data {
+            attributes {
+              Titulo
+              slug
+              DescripcionCorta
+              Cuerpo
+              createdAt
+              ImagenDestacada {
+                data {
+                  attributes {
+                    url
+                    width
+                    height
+                  }
+                }
+              }
+            }
+          }
+        }
+        podcasts (sort: "createdAt:desc"){
+          data {
+            attributes {
+              Titulo
+              slug
+              DescripcionCorta
+              Link
+              Duracion
+              createdAt
+              ImagenDestacada {
+                data {
+                  attributes {
+                    url
+                    width
+                    height
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+`;
+const GET_AUTORS_SLUGS = _apollo_client__WEBPACK_IMPORTED_MODULE_0__.gql`
+      query getAutoresSlugs{
+        autors{
+          data{
+            id
+            attributes{
+              slug
+            }
+          }
+        }
+      }`;
+const GET_AUTOR_POSTS = _apollo_client__WEBPACK_IMPORTED_MODULE_0__.gql`
+query getAutorPosts($slug: String!) {
+  autors( filters: { slug: { eq: $slug } }) {
+    data {
+      attributes {
+        Nombre
+        Descripcion
+        slug
+        Foto{
+          data{
+            attributes{
+                url
+                width
+                height
+            }
+          }
+        }
         slug
         notas (sort: "createdAt:desc"){
           data {

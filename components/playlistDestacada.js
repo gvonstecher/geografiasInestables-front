@@ -6,7 +6,7 @@ import PlayerButtonLg from '@/components/PlayerButtonLg';
 export default function PlaylistDestacada({ titulo, slug, descripcionCorta, link, imagenDestacada, backendUrl, onLoadPlayer }) {
 	return(
         <>
-                            <article className='col-span-full bg-white rounded-lg p-12 flex drop-shadow-md'>
+                            <article className='col-span-full bg-white rounded-lg p-5 md:p-12 flex flex-col-reverse md:flex-row drop-shadow-md'>
 								<div className='flex basis-3/5'>
 									<div className='flex flex-col justify-between me-3 w-full'>
 										<div>

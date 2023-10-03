@@ -12,7 +12,7 @@ __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __we
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* reexport safe */ private_next_pages_acerca_de_js__WEBPACK_IMPORTED_MODULE_0__.Z),
-/* harmony export */   "getServerSideProps": () => (/* reexport safe */ private_next_pages_acerca_de_js__WEBPACK_IMPORTED_MODULE_0__.N)
+/* harmony export */   "getStaticProps": () => (/* reexport safe */ private_next_pages_acerca_de_js__WEBPACK_IMPORTED_MODULE_0__.b)
 /* harmony export */ });
 /* harmony import */ var private_next_pages_acerca_de_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6004);
 var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([private_next_pages_acerca_de_js__WEBPACK_IMPORTED_MODULE_0__]);
@@ -32,8 +32,8 @@ __webpack_async_result__();
 
 __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "N": () => (/* binding */ getServerSideProps),
-/* harmony export */   "Z": () => (/* binding */ AcercaDe)
+/* harmony export */   "Z": () => (/* binding */ AcercaDe),
+/* harmony export */   "b": () => (/* binding */ getStaticProps)
 /* harmony export */ });
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5893);
 /* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(968);
@@ -66,7 +66,7 @@ function AcercaDe({ acercaDe , autores , backendUrl  }) {
     return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
         children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_Layout__WEBPACK_IMPORTED_MODULE_4__/* ["default"] */ .Z, {
             children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-                className: "bg-white rounded-lg px-20 py-12 drop-shadow-md",
+                className: "bg-white rounded-lg p-5 md:px-20 md:py-12 drop-shadow-md",
                 children: [
                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("h3", {
                         className: "text-2xl",
@@ -78,25 +78,30 @@ function AcercaDe({ acercaDe , autores , backendUrl  }) {
                     }),
                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
                         className: "cuerpo border-b border-dark-green pb-5 mb-5 text-xl text-justify",
-                        children: acercaDe
+                        dangerouslySetInnerHTML: {
+                            __html: acercaDe
+                        }
                     }),
-                    autores.map((autor, i)=>{
-                        return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
-                            children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_autorDestacado__WEBPACK_IMPORTED_MODULE_5__/* ["default"] */ .Z, {
-                                nombre: autor.attributes.Nombre,
-                                slug: autor.attributes.slug,
-                                descripcion: autor.attributes.Descripcion,
-                                foto: autor.attributes.Foto.data.attributes.url,
-                                backendUrl: backendUrl
-                            }, i)
-                        });
+                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+                        className: " divide-y divid-solid divide-green",
+                        children: autores.map((autor, i)=>{
+                            return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
+                                children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_autorDestacado__WEBPACK_IMPORTED_MODULE_5__/* ["default"] */ .Z, {
+                                    nombre: autor.attributes.Nombre,
+                                    slug: autor.attributes.slug,
+                                    descripcion: autor.attributes.Descripcion,
+                                    foto: autor.attributes.Foto.data.attributes.url,
+                                    backendUrl: backendUrl
+                                }, i)
+                            });
+                        })
                     })
                 ]
             })
         })
     });
 }
-async function getServerSideProps() {
+async function getStaticProps() {
     const data = await fetch(backendUrl + "/api/acerca-de");
     const acercaDe = await data.json();
     const dataAutores = await client.query({
@@ -107,7 +112,8 @@ async function getServerSideProps() {
             acercaDe: acercaDe.data.attributes.Cuerpo,
             autores: dataAutores.data.autors.data,
             backendUrl: backendUrl
-        }
+        },
+        revalidate: 60
     };
 }
 

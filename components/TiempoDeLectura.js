@@ -12,7 +12,7 @@ function TiempoDeLectura({ cuerpo }) {
   }, [cuerpo]);
 
   return (
-    <div className='border-t border-dark-green pt-2 text-lg text-gray-800'>
+    <div className='border-t border-green pt-2 text-lg text-gray-800'>
     <i className='inline w-3 h-3'>
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 35 35" fill="none" className='inline'>
             <g clipPath="url(#clip0_35_273)">

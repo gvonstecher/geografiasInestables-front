@@ -44,52 +44,50 @@ __webpack_async_result__();
 
 
 function NotaCaja({ titulo , slug , categoria , cuerpo , imagenDestacada , backendUrl  }) {
-    return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
-        children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("article", {
-            className: " bg-white rounded-lg drop-shadow-md",
-            children: [
-                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_2___default()), {
-                    href: "/notas/" + slug,
-                    children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_image__WEBPACK_IMPORTED_MODULE_1___default()), {
-                        className: "object-cover h-60 w-full rounded-t-lg",
-                        src: backendUrl + imagenDestacada.attributes.url,
-                        layout: "responsive",
-                        width: 400,
-                        height: 225,
-                        alt: titulo
-                    })
-                }),
-                /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-                    className: "flex flex-col justify-between p-3",
-                    children: [
-                        /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-                            children: [
-                                typeof categoria != "undefined" && typeof categoria != null && categoria != null && /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_2___default()), {
-                                    href: "/secciones/" + categoria.attributes.slug,
-                                    children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("h3", {
-                                        className: "uppercase text-light-green font-medium mb-2 font-work",
-                                        children: categoria.attributes.Titulo
-                                    })
-                                }),
-                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_2___default()), {
-                                    href: "/notas/" + slug,
-                                    children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("h2", {
-                                        className: "font-martel text-xl font-bold",
-                                        children: titulo
-                                    })
-                                })
-                            ]
-                        }),
-                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
-                            className: "pt-4 text-gray-800 text-sm",
-                            children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_TiempoDeLectura__WEBPACK_IMPORTED_MODULE_3__/* ["default"] */ .Z, {
-                                cuerpo: cuerpo
-                            })
-                        })
-                    ]
+    return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("article", {
+        className: " bg-white rounded-lg drop-shadow-md",
+        children: [
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_2___default()), {
+                href: "/notas/" + slug,
+                children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_image__WEBPACK_IMPORTED_MODULE_1___default()), {
+                    className: "object-cover h-60 w-full rounded-t-lg",
+                    src: backendUrl + imagenDestacada.attributes.url,
+                    layout: "responsive",
+                    width: 400,
+                    height: 225,
+                    alt: titulo
                 })
-            ]
-        })
+            }),
+            /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                className: "flex flex-col justify-between p-3",
+                children: [
+                    /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                        children: [
+                            typeof categoria != "undefined" && typeof categoria != null && categoria != null && /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_2___default()), {
+                                href: "/secciones/" + categoria.attributes.slug,
+                                children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("h3", {
+                                    className: "uppercase text-light-green font-medium mb-2 font-work",
+                                    children: categoria.attributes.Titulo
+                                })
+                            }),
+                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_2___default()), {
+                                href: "/notas/" + slug,
+                                children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("h2", {
+                                    className: "font-martel text-xl font-bold",
+                                    children: titulo
+                                })
+                            })
+                        ]
+                    }),
+                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+                        className: "pt-4 text-gray-800 text-sm",
+                        children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_TiempoDeLectura__WEBPACK_IMPORTED_MODULE_3__/* ["default"] */ .Z, {
+                            cuerpo: cuerpo
+                        })
+                    })
+                ]
+            })
+        ]
     });
 }
 
@@ -133,6 +131,7 @@ const PlayerButtonSm = ({ duracion =null , onClick  })=>{
                     height: "24",
                     viewBox: "0 0 24 24",
                     fill: "none",
+                    className: "pl-1",
                     children: [
                         /*#__PURE__*/ jsx_runtime.jsx("rect", {
                             width: "24",
@@ -270,8 +269,11 @@ __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __we
 /* harmony import */ var _components_notaCaja__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(7388);
 /* harmony import */ var _components_podcastDestacado__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(2383);
 /* harmony import */ var _components_podcastCaja__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(7319);
+/* harmony import */ var react_slick__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(8096);
+/* harmony import */ var react_slick__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(react_slick__WEBPACK_IMPORTED_MODULE_8__);
 var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_components_Layout__WEBPACK_IMPORTED_MODULE_1__]);
 _components_Layout__WEBPACK_IMPORTED_MODULE_1__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];
+
 
 
 
@@ -283,66 +285,108 @@ _components_Layout__WEBPACK_IMPORTED_MODULE_1__ = (__webpack_async_dependencies_
 const apiUrl = process.env.STRAPIGRAPHQLURL;
 const backendUrl = process.env.STRAPIBASEURL;
 function Home({ notas , podcasts , backendUrl , onLoadPlayer  }) {
+    const settingsSlideNotas = {
+        speed: 500,
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        initialSlide: 0,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    dots: true
+                }
+            }
+        ]
+    };
+    const settingsSlidePodcasts = {
+        speed: 500,
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        initialSlide: 0,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    dots: true
+                }
+            }
+        ]
+    };
     return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
         children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components_Layout__WEBPACK_IMPORTED_MODULE_1__/* ["default"] */ .Z, {
             children: [
-                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("section", {
+                /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("section", {
                     id: "home-notas",
-                    className: "grid grid-cols-3 gap-8 font-martel",
-                    children: notas.map((nota, i)=>{
-                        if (i === 0) {
-                            return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_notaDestacada__WEBPACK_IMPORTED_MODULE_4__/* ["default"] */ .Z, {
-                                titulo: nota.attributes.Titulo,
-                                slug: nota.attributes.slug,
-                                categoria: nota.attributes.categoria_nota.data,
-                                descripcionCorta: nota.attributes.DescripcionCorta,
-                                cuerpo: nota.attributes.Cuerpo,
-                                imagenDestacada: nota.attributes.ImagenDestacada.data,
-                                backendUrl: backendUrl
-                            }, i);
-                        } else {
-                            return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_notaCaja__WEBPACK_IMPORTED_MODULE_5__/* ["default"] */ .Z, {
-                                titulo: nota.attributes.Titulo,
-                                slug: nota.attributes.slug,
-                                categoria: nota.attributes.categoria_nota.data,
-                                cuerpo: nota.attributes.Cuerpo,
-                                imagenDestacada: nota.attributes.ImagenDestacada.data,
-                                backendUrl: backendUrl
-                            }, i);
-                        }
-                    })
+                    className: "font-martel",
+                    children: [
+                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_notaDestacada__WEBPACK_IMPORTED_MODULE_4__/* ["default"] */ .Z, {
+                            titulo: notas[0].attributes.Titulo,
+                            slug: notas[0].attributes.slug,
+                            categoria: notas[0].attributes.categoria_nota.data,
+                            descripcionCorta: notas[0].attributes.DescripcionCorta,
+                            cuerpo: notas[0].attributes.Cuerpo,
+                            imagenDestacada: notas[0].attributes.ImagenDestacada.data,
+                            backendUrl: backendUrl
+                        }),
+                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+                            className: "w-full p-8 md:py-8",
+                            children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((react_slick__WEBPACK_IMPORTED_MODULE_8___default()), {
+                                ...settingsSlideNotas,
+                                children: notas.slice(1).map((nota, i)=>{
+                                    return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_notaCaja__WEBPACK_IMPORTED_MODULE_5__/* ["default"] */ .Z, {
+                                        titulo: nota.attributes.Titulo,
+                                        slug: nota.attributes.slug,
+                                        categoria: nota.attributes.categoria_nota.data,
+                                        cuerpo: nota.attributes.Cuerpo,
+                                        imagenDestacada: nota.attributes.ImagenDestacada.data,
+                                        backendUrl: backendUrl
+                                    }, i);
+                                })
+                            })
+                        })
+                    ]
                 }),
-                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("section", {
+                /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("section", {
                     id: "home-podcasts",
-                    className: "grid grid-cols-4 gap-8 font-work mt-10",
-                    children: podcasts.map((podcast, i)=>{
-                        if (i === 0) {
-                            return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_podcastDestacado__WEBPACK_IMPORTED_MODULE_6__/* ["default"] */ .Z, {
-                                titulo: podcast.attributes.Titulo,
-                                slug: podcast.attributes.slug,
-                                categoria: podcast.attributes.categoria_podcast.data,
-                                descripcionCorta: podcast.attributes.DescripcionCorta,
-                                duracion: podcast.attributes.Duracion,
-                                link: podcast.attributes.Link,
-                                imagenDestacada: podcast.attributes.ImagenDestacada.data,
-                                backendUrl: backendUrl,
-                                onLoadPlayer: onLoadPlayer
-                            }, i);
-                        } else {
-                            return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_podcastCaja__WEBPACK_IMPORTED_MODULE_7__/* ["default"] */ .Z, {
-                                podcast: podcast,
-                                titulo: podcast.attributes.Titulo,
-                                slug: podcast.attributes.slug,
-                                categoria: podcast.attributes.categoria_podcast.data,
-                                descripcionCorta: podcast.attributes.DescripcionCorta,
-                                duracion: podcast.attributes.Duracion,
-                                link: podcast.attributes.Link,
-                                imagenDestacada: podcast.attributes.ImagenDestacada.data,
-                                backendUrl: backendUrl,
-                                onLoadPlayer: onLoadPlayer
-                            }, i);
-                        }
-                    })
+                    className: "font-work mt-10",
+                    children: [
+                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_podcastDestacado__WEBPACK_IMPORTED_MODULE_6__/* ["default"] */ .Z, {
+                            titulo: podcasts[0].attributes.Titulo,
+                            slug: podcasts[0].attributes.slug,
+                            categoria: podcasts[0].attributes.categoria_podcast.data,
+                            descripcionCorta: podcasts[0].attributes.DescripcionCorta,
+                            duracion: podcasts[0].attributes.Duracion,
+                            link: podcasts[0].attributes.Link,
+                            imagenDestacada: podcasts[0].attributes.ImagenDestacada.data,
+                            backendUrl: backendUrl,
+                            onLoadPlayer: onLoadPlayer
+                        }),
+                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+                            className: "w-full p-8 md:py-8",
+                            children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((react_slick__WEBPACK_IMPORTED_MODULE_8___default()), {
+                                ...settingsSlidePodcasts,
+                                children: podcasts.slice(1).map((podcast, i)=>{
+                                    return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_podcastCaja__WEBPACK_IMPORTED_MODULE_7__/* ["default"] */ .Z, {
+                                        podcast: podcast,
+                                        titulo: podcast.attributes.Titulo,
+                                        slug: podcast.attributes.slug,
+                                        categoria: podcast.attributes.categoria_podcast.data,
+                                        descripcionCorta: podcast.attributes.DescripcionCorta,
+                                        duracion: podcast.attributes.Duracion,
+                                        link: podcast.attributes.Link,
+                                        imagenDestacada: podcast.attributes.ImagenDestacada.data,
+                                        backendUrl: backendUrl,
+                                        onLoadPlayer: onLoadPlayer
+                                    }, i);
+                                })
+                            })
+                        })
+                    ]
                 })
             ]
         })
@@ -526,6 +570,13 @@ module.exports = require("react");
 /***/ ((module) => {
 
 module.exports = require("react-dom");
+
+/***/ }),
+
+/***/ 8096:
+/***/ ((module) => {
+
+module.exports = require("react-slick");
 
 /***/ }),
 

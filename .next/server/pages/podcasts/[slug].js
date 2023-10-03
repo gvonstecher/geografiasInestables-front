@@ -69,7 +69,7 @@ function Podcast({ podcast , backendUrl , onLoadPlayer  }) {
     return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
         children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_Layout__WEBPACK_IMPORTED_MODULE_7__/* ["default"] */ .Z, {
             children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("article", {
-                className: " bg-white rounded-lg px-20 py-12 drop-shadow-md",
+                className: " bg-white rounded-lg p-5 md:px-20 md:py-12 drop-shadow-md",
                 children: [
                     (podcast.categoria_podcast.data != null) ?? /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_3___default()), {
                         href: "/programas/" + podcast.categoria_podcast.data.attributes.slug,
@@ -104,10 +104,10 @@ function Podcast({ podcast , backendUrl , onLoadPlayer  }) {
                         ]
                     }),
                     /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-                        className: "flex",
+                        className: "flex lg:flex-row flex-col-reverse",
                         children: [
                             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
-                                className: "flex basis-2/3",
+                                className: "flex lg:basis-2/3",
                                 children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
                                     className: "content my-6 font-martel text-lg leading-10 text-justify pe-4",
                                     dangerouslySetInnerHTML: {
@@ -116,7 +116,7 @@ function Podcast({ podcast , backendUrl , onLoadPlayer  }) {
                                 })
                             }),
                             /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-                                className: "flex basis-1/3",
+                                className: "flex lg:basis-1/3",
                                 children: [
                                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_image__WEBPACK_IMPORTED_MODULE_2___default()), {
                                         className: "mx-auto",

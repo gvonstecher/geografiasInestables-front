@@ -186,7 +186,7 @@ function Nota({ nota , backendUrl  }) {
     return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
         children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_Layout__WEBPACK_IMPORTED_MODULE_7__/* ["default"] */ .Z, {
             children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("article", {
-                className: " bg-white rounded-lg px-20 py-12 drop-shadow-md",
+                className: " bg-white rounded-lg p-5 md:px-20 md:py-12 drop-shadow-md",
                 children: [
                     (nota.categoria_nota.data != null) ?? /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_3___default()), {
                         href: "/secciones/" + nota.categoria_nota.data.attributes.slug,

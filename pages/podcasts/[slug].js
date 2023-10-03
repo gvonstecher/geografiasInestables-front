@@ -18,7 +18,7 @@ export default function Podcast({podcast, backendUrl, onLoadPlayer}) {
   return (
     <>
         <Layout>
-            <article className=" bg-white rounded-lg px-20 py-12 drop-shadow-md">
+            <article className=" bg-white rounded-lg p-5 md:px-20 md:py-12 drop-shadow-md">
                 {podcast.categoria_podcast.data != null ??
                     <Link href={'/programas/'+podcast.categoria_podcast.data.attributes.slug}>
                         <h3 className='uppercase text-light-green font-medium mb-2 font-work'>{podcast.categoria_podcast.data.attributes.Titulo}</h3>
@@ -36,13 +36,13 @@ export default function Podcast({podcast, backendUrl, onLoadPlayer}) {
 				    />
                     {podcast.autor.data.attributes.Nombre}
                 </h5>
-                <div className='flex'>
-                    <div className='flex basis-2/3'>
+                <div className='flex lg:flex-row flex-col-reverse'>
+                    <div className='flex lg:basis-2/3'>
                         <div className='content my-6 font-martel text-lg leading-10 text-justify pe-4'
                         dangerouslySetInnerHTML={{ __html: podcast.Cuerpo }}
                         ></div>
                     </div>
-                    <div className='flex basis-1/3'>
+                    <div className='flex lg:basis-1/3'>
                         <Image
                             className='mx-auto'
                             src={backendUrl+podcast.ImagenDestacada.data.attributes.url} 

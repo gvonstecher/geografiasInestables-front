@@ -20,7 +20,7 @@ export default function Nota({nota, backendUrl}) {
   return (
     <>
         <Layout>
-            <article className=" bg-white rounded-lg px-20 py-12 drop-shadow-md">
+            <article className=" bg-white rounded-lg p-5 md:px-20 md:py-12 drop-shadow-md">
                 {nota.categoria_nota.data != null ??
                     <Link href={'/secciones/'+nota.categoria_nota.data.attributes.slug}>
 					    <h3 className='uppercase text-light-green font-medium mb-2 font-work'>{nota.categoria_nota.data.attributes.Titulo}</h3>

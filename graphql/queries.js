@@ -197,6 +197,7 @@ const GET_PODCAST = gql`
             data{
               attributes{
                 Tag
+                slug
               }
             }
           }
@@ -400,6 +401,85 @@ query getTagsPosts($slug: String!) {
 }
 `;
 
+
+const GET_AUTORS_SLUGS = gql`
+      query getAutoresSlugs{
+        autors{
+          data{
+            id
+            attributes{
+              slug
+            }
+          }
+        }
+      }`;
+
+
+const GET_AUTOR_POSTS = gql`
+query getAutorPosts($slug: String!) {
+  autors( filters: { slug: { eq: $slug } }) {
+    data {
+      attributes {
+        Nombre
+        Descripcion
+        slug
+        Foto{
+          data{
+            attributes{
+                url
+                width
+                height
+            }
+          }
+        }
+        slug
+        notas (sort: "createdAt:desc"){
+          data {
+            attributes {
+              Titulo
+              slug
+              DescripcionCorta
+              Cuerpo
+              createdAt
+              ImagenDestacada {
+                data {
+                  attributes {
+                    url
+                    width
+                    height
+                  }
+                }
+              }
+            }
+          }
+        }
+        podcasts (sort: "createdAt:desc"){
+          data {
+            attributes {
+              Titulo
+              slug
+              DescripcionCorta
+              Link
+              Duracion
+              createdAt
+              ImagenDestacada {
+                data {
+                  attributes {
+                    url
+                    width
+                    height
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+`;
+
 const GET_PLAYLISTS = gql`
 query getPlaylists{
   playlists(pagination: {start: 0, limit:4}, sort: "updatedAt:DESC") {
@@ -434,6 +514,8 @@ query getPlaylists{
     GET_PROGRAMS_SLUGS,
     GET_PROGRAM_PODCASTS,
     GET_AUTORS,
+    GET_AUTORS_SLUGS,
+    GET_AUTOR_POSTS,
     GET_TAGS_SLUGS,
     GET_TAG_POSTS,
     GET_PLAYLISTS

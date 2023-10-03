@@ -109,7 +109,7 @@ export default function Search({backendUrl, onLoadPlayer}) {
   return (
     <Layout>
       	<section id='search' className='grid grid-cols-3 gap-8 font-martel'>
-			<div className='col-span-3 bg-white rounded-lg p-12 flex drop-shadow-md items-stretch font-work'>
+			<div className='col-span-3 bg-white rounded-lg p-5 md:p-12  flex drop-shadow-md items-stretch font-work'>
 				<input
 					type="text"
 					className='grow '
@@ -166,7 +166,7 @@ export default function Search({backendUrl, onLoadPlayer}) {
                   )
               default: 
                   return (
-					<div className='col-span-3 bg-white rounded-lg p-12 flex drop-shadow-md' key={result._meilisearch_id}>
+					<div className='col-span-3 bg-white rounded-lg p-5 md:p-12 flex drop-shadow-md' key={result._meilisearch_id}>
 						<AutorDestacado 
 							key={result._meilisearch_id} 
 							nombre={result.Nombre}

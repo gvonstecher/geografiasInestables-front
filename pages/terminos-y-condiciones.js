@@ -17,7 +17,7 @@ export default function Terminos({titulo, cuerpo}) {
     return (
         <>
             <Layout>
-                <div className="bg-white rounded-lg px-20 py-12 drop-shadow-md">
+                <div className="bg-white rounded-lg p-7 md:px-20 md:py-12 drop-shadow-md">
                     <h2 className='text-4xl font-oldStandard pb-4 mb-4 border-b border-dark-green'>{titulo}</h2>
                     <div className='cuerpo pb-5 mb-5 text-lg text-justify'>
                         {cuerpo}

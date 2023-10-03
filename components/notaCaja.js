@@ -4,7 +4,6 @@ import TiempoDeLectura from './TiempoDeLectura';
 
 export default function NotaCaja({ titulo, slug, categoria, cuerpo, imagenDestacada, backendUrl }) {
     return(
-        <>
             				<article className=' bg-white rounded-lg drop-shadow-md'>
 								<Link href={'/notas/'+slug}>
 									<Image 
@@ -33,6 +32,5 @@ export default function NotaCaja({ titulo, slug, categoria, cuerpo, imagenDestac
 									</div>
 								</div>
 							</article>
-        </>
     )
 }

@@ -12,7 +12,7 @@ const PersistentPlayer = ({src}) => {
         
             <div 
                 className={
-                    `fixed bottom-0 w-full z-40 ${showMe? "h-20":"min-h-min"}`
+                    `sticky bottom-0 w-full z-40 ${showMe? "h-20":"min-h-min"}`
                 } 
             >
                     <button className="absolute top-3 right-3 z-50 rounded-full p-4 text-2xl font-bold bg-black"  onClick={toggleVisibilty}>
@@ -26,7 +26,7 @@ const PersistentPlayer = ({src}) => {
                     <div 
                         id="persistentPlayer" 
                         className={
-                            `max-h-48 bg-dark-green ${showMe? "hidden":"block"}`
+                            `bg-dark-green ${showMe? "hidden":"block"}`
                         } 
                         dangerouslySetInnerHTML={{__html: src}}></div>
             </div>
