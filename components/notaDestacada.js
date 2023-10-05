@@ -32,7 +32,6 @@ export default function NotaDestacada({ titulo, slug, categoria, descripcionCort
 										<Image 
 											src={backendUrl+imagenDestacada.attributes.url} 
 											alt={titulo}
-											layout="responsive"
 											className='rounded-md'
 											width={700}
 											height={420}

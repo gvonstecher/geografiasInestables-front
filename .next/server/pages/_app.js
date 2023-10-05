@@ -84,6 +84,8 @@ const style_namespaceObject = require("styled-jsx/style");
 var style_default = /*#__PURE__*/__webpack_require__.n(style_namespaceObject);
 // EXTERNAL MODULE: external "react"
 var external_react_ = __webpack_require__(6689);
+// EXTERNAL MODULE: ./styles/slick.css
+var slick = __webpack_require__(6655);
 // EXTERNAL MODULE: ./styles/globals.css
 var globals = __webpack_require__(6764);
 ;// CONCATENATED MODULE: ./components/PersistentPlayer.js
@@ -119,6 +121,7 @@ const PersistentPlayer = ({ src  })=>{
 /* harmony default export */ const components_PersistentPlayer = (PersistentPlayer);
 
 ;// CONCATENATED MODULE: ./pages/_app.js
+
 
 
 
@@ -189,6 +192,13 @@ async function getServerSideProps() {
 /***/ }),
 
 /***/ 6764:
+/***/ (() => {
+
+
+
+/***/ }),
+
+/***/ 6655:
 /***/ (() => {
 
 

@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import { Old_Standard_TT, Martel, Work_Sans, Noto_Sans } from 'next/font/google';
+import '@/styles/slick.css'
 import '@/styles/globals.css'
 import PersistentPlayer from '@/components/PersistentPlayer';
 

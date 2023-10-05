@@ -30,7 +30,6 @@ export default function PlaylistDestacada({ titulo, slug, descripcionCorta, link
 											className='rounded-lg'
 											src={backendUrl+imagenDestacada.attributes.url} 
 											alt={titulo}
-											layout="responsive"
 											width={700}
 											height={420}
 										/>

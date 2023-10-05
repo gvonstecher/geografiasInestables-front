@@ -49,7 +49,7 @@ function Musica({ musica  }) {
                 id: "music-playlist",
                 children: [
                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("h2", {
-                        class: "text-4xl font-medium mb-4",
+                        className: "text-4xl font-medium mb-4",
                         children: "M\xfasica"
                     }),
                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {

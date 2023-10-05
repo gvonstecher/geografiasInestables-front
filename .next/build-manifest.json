@@ -5,8 +5,8 @@
   "devFiles": [],
   "ampDevFiles": [],
   "lowPriorityFiles": [
-    "static/l3Ig5jacZeXq4Q_gRwasF/_buildManifest.js",
-    "static/l3Ig5jacZeXq4Q_gRwasF/_ssgManifest.js"
+    "static/F_cjUcEQLsfi6UgTnww6s/_buildManifest.js",
+    "static/F_cjUcEQLsfi6UgTnww6s/_ssgManifest.js"
   ],
   "rootMainFiles": [],
   "pages": {
@@ -16,15 +16,15 @@
       "static/chunks/main-9c8fd354a6242c23.js",
       "static/chunks/74-047282983957e108.js",
       "static/chunks/66-34f931273ba2cf43.js",
-      "static/chunks/724-710b77f04eae189a.js",
-      "static/chunks/pages/index-f2793ec138a31767.js"
+      "static/chunks/724-babb172adce8813a.js",
+      "static/chunks/pages/index-c99b5e0b3e138846.js"
     ],
     "/_app": [
       "static/chunks/webpack-59c5c889f52620d6.js",
       "static/chunks/framework-2c79e2a64abdb08b.js",
       "static/chunks/main-9c8fd354a6242c23.js",
-      "static/css/a2b5f89c6ffe6876.css",
-      "static/chunks/pages/_app-462394fd2711af06.js"
+      "static/css/26e4167c94c4ae25.css",
+      "static/chunks/pages/_app-d0cd26d3259523bf.js"
     ],
     "/_error": [
       "static/chunks/webpack-59c5c889f52620d6.js",
@@ -37,7 +37,7 @@
       "static/chunks/framework-2c79e2a64abdb08b.js",
       "static/chunks/main-9c8fd354a6242c23.js",
       "static/chunks/74-047282983957e108.js",
-      "static/chunks/724-710b77f04eae189a.js",
+      "static/chunks/724-babb172adce8813a.js",
       "static/chunks/pages/acerca-de-a5a59846d846f70c.js"
     ],
     "/autores/[slug]": [
@@ -45,8 +45,8 @@
       "static/chunks/framework-2c79e2a64abdb08b.js",
       "static/chunks/main-9c8fd354a6242c23.js",
       "static/chunks/74-047282983957e108.js",
-      "static/chunks/724-710b77f04eae189a.js",
-      "static/chunks/pages/autores/[slug]-098e98b4304ccf7b.js"
+      "static/chunks/724-babb172adce8813a.js",
+      "static/chunks/pages/autores/[slug]-71a8310146c8fcb6.js"
     ],
     "/busqueda": [
       "static/chunks/webpack-59c5c889f52620d6.js",
@@ -54,32 +54,32 @@
       "static/chunks/main-9c8fd354a6242c23.js",
       "static/chunks/74-047282983957e108.js",
       "static/chunks/229-17cd748e2171a845.js",
-      "static/chunks/724-710b77f04eae189a.js",
-      "static/chunks/pages/busqueda-e122b452b140e1b9.js"
+      "static/chunks/724-babb172adce8813a.js",
+      "static/chunks/pages/busqueda-40284a0777cf1aa2.js"
     ],
     "/etiqueta/[slug]": [
       "static/chunks/webpack-59c5c889f52620d6.js",
       "static/chunks/framework-2c79e2a64abdb08b.js",
       "static/chunks/main-9c8fd354a6242c23.js",
       "static/chunks/74-047282983957e108.js",
-      "static/chunks/724-710b77f04eae189a.js",
-      "static/chunks/pages/etiqueta/[slug]-9e1990403c84a7a1.js"
+      "static/chunks/724-babb172adce8813a.js",
+      "static/chunks/pages/etiqueta/[slug]-8688fd4f637e17cb.js"
     ],
     "/musica": [
       "static/chunks/webpack-59c5c889f52620d6.js",
       "static/chunks/framework-2c79e2a64abdb08b.js",
       "static/chunks/main-9c8fd354a6242c23.js",
       "static/chunks/74-047282983957e108.js",
-      "static/chunks/724-710b77f04eae189a.js",
-      "static/chunks/pages/musica-72cc49aa81dd60ff.js"
+      "static/chunks/724-babb172adce8813a.js",
+      "static/chunks/pages/musica-a45834a16c5322ad.js"
     ],
     "/musica_old": [
       "static/chunks/webpack-59c5c889f52620d6.js",
       "static/chunks/framework-2c79e2a64abdb08b.js",
       "static/chunks/main-9c8fd354a6242c23.js",
       "static/chunks/74-047282983957e108.js",
-      "static/chunks/724-710b77f04eae189a.js",
-      "static/chunks/pages/musica_old-542f27766c51cc4c.js"
+      "static/chunks/724-babb172adce8813a.js",
+      "static/chunks/pages/musica_old-a29b337929245cd6.js"
     ],
     "/notas/[slug]": [
       "static/chunks/webpack-59c5c889f52620d6.js",
@@ -88,7 +88,7 @@
       "static/chunks/74-047282983957e108.js",
       "static/chunks/480-034b01f2248ab24d.js",
       "static/chunks/818-02f206b9883e405e.js",
-      "static/chunks/724-710b77f04eae189a.js",
+      "static/chunks/724-babb172adce8813a.js",
       "static/chunks/pages/notas/[slug]-3f747707fcf39b37.js"
     ],
     "/podcasts/[slug]": [
@@ -97,7 +97,7 @@
       "static/chunks/main-9c8fd354a6242c23.js",
       "static/chunks/74-047282983957e108.js",
       "static/chunks/480-034b01f2248ab24d.js",
-      "static/chunks/724-710b77f04eae189a.js",
+      "static/chunks/724-babb172adce8813a.js",
       "static/chunks/pages/podcasts/[slug]-c38dfa926334acaa.js"
     ],
     "/politicas-de-privacidad": [
@@ -106,7 +106,7 @@
       "static/chunks/main-9c8fd354a6242c23.js",
       "static/chunks/74-047282983957e108.js",
       "static/chunks/612-a177315e9f078854.js",
-      "static/chunks/724-710b77f04eae189a.js",
+      "static/chunks/724-babb172adce8813a.js",
       "static/chunks/pages/politicas-de-privacidad-4c71288f21739975.js"
     ],
     "/programas/[slug]": [
@@ -114,16 +114,16 @@
       "static/chunks/framework-2c79e2a64abdb08b.js",
       "static/chunks/main-9c8fd354a6242c23.js",
       "static/chunks/74-047282983957e108.js",
-      "static/chunks/724-710b77f04eae189a.js",
-      "static/chunks/pages/programas/[slug]-ee30f6b764726c17.js"
+      "static/chunks/724-babb172adce8813a.js",
+      "static/chunks/pages/programas/[slug]-ecf9bc2dad0a4c6f.js"
     ],
     "/secciones/[slug]": [
       "static/chunks/webpack-59c5c889f52620d6.js",
       "static/chunks/framework-2c79e2a64abdb08b.js",
       "static/chunks/main-9c8fd354a6242c23.js",
       "static/chunks/74-047282983957e108.js",
-      "static/chunks/724-710b77f04eae189a.js",
-      "static/chunks/pages/secciones/[slug]-6f30da34f4091d51.js"
+      "static/chunks/724-babb172adce8813a.js",
+      "static/chunks/pages/secciones/[slug]-622742b3a3f22d9a.js"
     ],
     "/terminos-y-condiciones": [
       "static/chunks/webpack-59c5c889f52620d6.js",
@@ -131,7 +131,7 @@
       "static/chunks/main-9c8fd354a6242c23.js",
       "static/chunks/74-047282983957e108.js",
       "static/chunks/612-a177315e9f078854.js",
-      "static/chunks/724-710b77f04eae189a.js",
+      "static/chunks/724-babb172adce8813a.js",
       "static/chunks/pages/terminos-y-condiciones-4918b637af99c50c.js"
     ]
   },

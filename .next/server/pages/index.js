@@ -52,7 +52,6 @@ function NotaCaja({ titulo , slug , categoria , cuerpo , imagenDestacada , backe
                 children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_image__WEBPACK_IMPORTED_MODULE_1___default()), {
                     className: "object-cover h-60 w-full rounded-t-lg",
                     src: backendUrl + imagenDestacada.attributes.url,
-                    layout: "responsive",
                     width: 400,
                     height: 225,
                     alt: titulo
@@ -216,7 +215,6 @@ function PodcastCaja({ titulo , slug , categoria , duracion , link , imagenDesta
                     children: typeof imagenDestacada != "undefined" && typeof imagenDestacada != null && imagenDestacada != null && /*#__PURE__*/ jsx_runtime.jsx((image_default()), {
                         className: "object-cover h-60 w-full rounded-t-lg",
                         src: backendUrl + imagenDestacada.attributes.url,
-                        layout: "responsive",
                         width: 300,
                         height: 200,
                         alt: titulo

@@ -92,7 +92,6 @@ function NotaDestacada({ titulo , slug , categoria , descripcionCorta , cuerpo ,
                         children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_image__WEBPACK_IMPORTED_MODULE_1___default()), {
                             src: backendUrl + imagenDestacada,
                             alt: titulo,
-                            layout: "responsive",
                             width: 700,
                             height: 420,
                             priority: true
@@ -179,7 +178,6 @@ function PodcastDestacado({ titulo , slug , categoria , descripcionCorta , durac
                             className: "rounded-lg",
                             src: backendUrl + imagenDestacada,
                             alt: titulo,
-                            layout: "responsive",
                             width: 700,
                             height: 420
                         })

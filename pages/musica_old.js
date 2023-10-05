@@ -7,7 +7,7 @@ export default function Musica({musica}) {
         <>
             <Layout>
                 <div id='music-playlist'>
-                    <h2 class="text-4xl font-medium mb-4">Música</h2>
+                    <h2 className="text-4xl font-medium mb-4">Música</h2>
                     <div  dangerouslySetInnerHTML={{__html: musica.data.attributes.Link}}></div>
                 </div>
             </Layout>

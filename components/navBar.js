@@ -104,7 +104,7 @@ const NavBar = () => {
             className="navbar-burger flex items-center text-blue-600 p-3"
             onClick={handleNav}
           >
-            <Image src="/menu.svg" width={24} height={24} className="h-12 w-12" />
+            <Image src="/menu.svg" width={24} height={24} className="h-12 w-12" alt="hamburguer menu" />
           </button>
         </div>
         <ul className="hidden lg:flex text-xl lg:gap-x-12">
@@ -149,8 +149,8 @@ const NavBar = () => {
 					{subNotasLinks.map((link) => (
 						<li key={link.id} className='bg-white text-black text-base w-full min-w-[250px] rounded-md shadow-[0_4px_4px_-0px_rgba(0,0,0,0.25)] hover:bg-gray-300'>
 							 
-							<Link href={'/secciones' + link.attributes.slug} className="flex w-full items-center p-2 tet-left">
-								<span class="h-10 w-10 bg-[#D9D9D9] mr-3 shrink-0"></span>
+							<Link href={'/secciones/' + link.attributes.slug} className="flex w-full items-center p-2 tet-left">
+								<span className="h-10 w-10 bg-[#D9D9D9] mr-3 shrink-0"></span>
 								{link.attributes.Titulo}
 							</Link>
 						</li>
@@ -193,10 +193,10 @@ const NavBar = () => {
 					{subPodcastsLinks.map((link) => (
 						<li key={link.id} className="bg-white text-black text-base w-full w-[250px] rounded-md shadow-[0_4px_4px_-0px_rgba(0,0,0,0.25)] hover:bg-gray-300">
 							<Link
-								href={'/programas' + link.attributes.slug}
+								href={'/programas/' + link.attributes.slug}
 								className='flex w-full items-center text-left p-2'
 							>
-								<span class="h-10 w-10 bg-[#D9D9D9] mr-3 shrink-0"></span>
+								<span className="h-10 w-10 bg-[#D9D9D9] mr-3 shrink-0"></span>
 								{link.attributes.Titulo}
 							</Link>
 						</li>
@@ -298,7 +298,7 @@ const NavBar = () => {
 
             <li className="my-3">
               <button className="flex items-center w-full justify-between p-4 rounded-md shadow-[0_4px_4px_-0px_rgba(0,0,0,0.25)]" onClick={handleSubNotasMobile}>
-                <div class="flex">
+                <div className="flex">
                   <i className="px-2">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                     <mask id="mask0_86_135" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">

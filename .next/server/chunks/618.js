@@ -68,7 +68,6 @@ function NotaDestacada({ titulo , slug , categoria , descripcionCorta , cuerpo ,
                         children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_image__WEBPACK_IMPORTED_MODULE_1___default()), {
                             src: backendUrl + imagenDestacada.attributes.url,
                             alt: titulo,
-                            layout: "responsive",
                             className: "rounded-md",
                             width: 700,
                             height: 420,

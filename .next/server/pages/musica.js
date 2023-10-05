@@ -87,7 +87,6 @@ function PlaylistDestacada({ titulo , slug , descripcionCorta , link , imagenDes
                         className: "rounded-lg",
                         src: backendUrl + imagenDestacada.attributes.url,
                         alt: titulo,
-                        layout: "responsive",
                         width: 700,
                         height: 420
                     })
@@ -181,7 +180,6 @@ function Playlists({ playlists , backendUrl , onLoadPlayer  }) {
                 id: "home-playlists",
                 className: "grid gap-8 font-martel",
                 children: playlists.map((playlist, i)=>{
-                    console.log(playlist);
                     return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_playlistDestacada__WEBPACK_IMPORTED_MODULE_7__/* ["default"] */ .Z, {
                         titulo: playlist.attributes.Titulo,
                         slug: playlist.attributes.slug,

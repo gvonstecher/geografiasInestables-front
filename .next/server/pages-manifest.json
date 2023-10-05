@@ -8,14 +8,14 @@
   "/autores/[slug]": "pages/autores/[slug].js",
   "/busqueda": "pages/busqueda.js",
   "/etiqueta/[slug]": "pages/etiqueta/[slug].js",
-  "/musica": "pages/musica.js",
   "/": "pages/index.js",
+  "/musica": "pages/musica.js",
   "/musica_old": "pages/musica_old.js",
   "/notas/[slug]": "pages/notas/[slug].js",
   "/podcasts/[slug]": "pages/podcasts/[slug].js",
+  "/politicas-de-privacidad": "pages/politicas-de-privacidad.js",
   "/programas/[slug]": "pages/programas/[slug].js",
   "/secciones/[slug]": "pages/secciones/[slug].js",
-  "/politicas-de-privacidad": "pages/politicas-de-privacidad.js",
   "/terminos-y-condiciones": "pages/terminos-y-condiciones.js",
   "/404": "pages/404.html"
 }

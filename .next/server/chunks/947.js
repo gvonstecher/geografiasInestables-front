@@ -75,7 +75,6 @@ function PodcastDestacado({ titulo , slug , categoria , descripcionCorta , durac
                             className: "rounded-lg",
                             src: backendUrl + imagenDestacada.attributes.url,
                             alt: titulo,
-                            layout: "responsive",
                             width: 700,
                             height: 420
                         })

@@ -18,7 +18,6 @@ export default function Playlists({playlists, backendUrl,onLoadPlayer}) {
             <Layout>
                 <section id="home-playlists" className="grid gap-8 font-martel">
                     {playlists.map((playlist, i) => {
-                        console.log(playlist);
                         return (
                             <PlaylistDestacada 
                                 key={i} 

@@ -38,7 +38,6 @@ export default function PodcastDestacado({ titulo, slug, categoria, descripcionC
 											className='rounded-lg'
 											src={backendUrl+imagenDestacada} 
 											alt={titulo}
-											layout="responsive"
 											width={700}
 											height={420}
 										/>

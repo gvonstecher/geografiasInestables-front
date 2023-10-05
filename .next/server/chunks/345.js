@@ -52,17 +52,6 @@ const Layout = ({ children =null  })=>{
                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("link", {
                         rel: "icon",
                         href: "/favicon.ico"
-                    }),
-                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("link", {
-                        rel: "stylesheet",
-                        type: "text/css",
-                        charset: "UTF-8",
-                        href: "https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
-                    }),
-                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("link", {
-                        rel: "stylesheet",
-                        type: "text/css",
-                        href: "https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
                     })
                 ]
             }),
@@ -509,11 +498,11 @@ const NavBar = ()=>{
                                             children: subNotasLinks.map((link)=>/*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("li", {
                                                     className: "bg-white text-black text-base w-full min-w-[250px] rounded-md shadow-[0_4px_4px_-0px_rgba(0,0,0,0.25)] hover:bg-gray-300",
                                                     children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)((next_link__WEBPACK_IMPORTED_MODULE_2___default()), {
-                                                        href: "/secciones" + link.attributes.slug,
+                                                        href: "/secciones/" + link.attributes.slug,
                                                         className: "flex w-full items-center p-2 tet-left",
                                                         children: [
                                                             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("span", {
-                                                                class: "h-10 w-10 bg-[#D9D9D9] mr-3 shrink-0"
+                                                                className: "h-10 w-10 bg-[#D9D9D9] mr-3 shrink-0"
                                                             }),
                                                             link.attributes.Titulo
                                                         ]
@@ -566,11 +555,11 @@ const NavBar = ()=>{
                                                 children: subPodcastsLinks.map((link)=>/*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("li", {
                                                         className: "bg-white text-black text-base w-full w-[250px] rounded-md shadow-[0_4px_4px_-0px_rgba(0,0,0,0.25)] hover:bg-gray-300",
                                                         children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)((next_link__WEBPACK_IMPORTED_MODULE_2___default()), {
-                                                            href: "/programas" + link.attributes.slug,
+                                                            href: "/programas/" + link.attributes.slug,
                                                             className: "flex w-full items-center text-left p-2",
                                                             children: [
                                                                 /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("span", {
-                                                                    class: "h-10 w-10 bg-[#D9D9D9] mr-3 shrink-0"
+                                                                    className: "h-10 w-10 bg-[#D9D9D9] mr-3 shrink-0"
                                                                 }),
                                                                 link.attributes.Titulo
                                                             ]
@@ -709,7 +698,7 @@ const NavBar = ()=>{
                                             onClick: handleSubNotasMobile,
                                             children: [
                                                 /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-                                                    class: "flex",
+                                                    className: "flex",
                                                     children: [
                                                         /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("i", {
                                                             className: "px-2",
