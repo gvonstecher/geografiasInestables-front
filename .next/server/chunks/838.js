@@ -1,0 +1,516 @@
+"use strict";
+exports.id = 838;
+exports.ids = [838];
+exports.modules = {
+
+/***/ 2838:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Ct": () => (/* binding */ GET_TAG_POSTS),
+/* harmony export */   "Fi": () => (/* binding */ GET_TAGS_SLUGS),
+/* harmony export */   "Gu": () => (/* binding */ GET_PODCAST),
+/* harmony export */   "Ix": () => (/* binding */ GET_SECTION_ARTICLES),
+/* harmony export */   "K7": () => (/* binding */ GET_PROGRAMS_SLUGS),
+/* harmony export */   "Rh": () => (/* binding */ GET_ARTICLE),
+/* harmony export */   "Um": () => (/* binding */ GET_PLAYLISTS),
+/* harmony export */   "Z5": () => (/* binding */ GET_HOME_POSTS),
+/* harmony export */   "ZK": () => (/* binding */ GET_AUTORS),
+/* harmony export */   "hb": () => (/* binding */ GET_PROGRAM_PODCASTS),
+/* harmony export */   "m_": () => (/* binding */ GET_AUTOR_POSTS),
+/* harmony export */   "n": () => (/* binding */ GET_ARTICLE_SLUGS),
+/* harmony export */   "rd": () => (/* binding */ GET_PODCASTS_SLUGS),
+/* harmony export */   "yS": () => (/* binding */ GET_SECTION_SLUGS),
+/* harmony export */   "zR": () => (/* binding */ GET_AUTORS_SLUGS)
+/* harmony export */ });
+/* harmony import */ var _apollo_client__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(9114);
+/* harmony import */ var _apollo_client__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_apollo_client__WEBPACK_IMPORTED_MODULE_0__);
+
+const GET_HOME_POSTS = _apollo_client__WEBPACK_IMPORTED_MODULE_0__.gql`
+query getHomePosts{
+  notas(pagination: {start: 0, limit:4}, sort: "updatedAt:DESC") {
+    data{
+      id
+      attributes{
+      	Titulo
+        DescripcionCorta
+        Cuerpo
+        slug
+        publishedAt
+        ImagenDestacada{
+          data{
+            attributes{
+                url
+            }
+          }
+        }
+        categoria_nota{
+          data{
+            attributes{
+              Titulo
+              slug
+            }
+          }
+        }
+      }
+    }
+  }
+  podcasts (pagination: {start: 0, limit:5}, sort: "updatedAt:DESC"){
+    data{
+      id,
+      attributes{
+        Titulo
+        DescripcionCorta
+        publishedAt
+        slug
+        Duracion,
+        Link
+        ImagenDestacada{
+          data{
+            attributes{
+              url
+            }
+          }
+        }
+        categoria_podcast{
+          data{
+            attributes{
+              Titulo
+              slug
+            }
+          }
+        }
+      }
+    }
+  }
+}
+`;
+const GET_ARTICLE_SLUGS = _apollo_client__WEBPACK_IMPORTED_MODULE_0__.gql`
+    query getArticleSlugs{
+      notas(pagination: {start: 0, limit:-1}, sort: "updatedAt:DESC") {
+        data{
+          id
+          attributes{
+            slug
+          }
+        }
+      }
+  }`;
+const GET_ARTICLE = _apollo_client__WEBPACK_IMPORTED_MODULE_0__.gql`
+  query getArticle($slug: String!) {
+    notas(filters: {slug: {eq: $slug}}) {
+      data {
+        attributes{
+          Titulo
+          Cuerpo
+          slug
+          publishedAt
+          updatedAt
+          ImagenDestacada{
+            data{
+              attributes{
+                  url
+                  width
+                  height
+                  caption
+              }
+            }
+          }
+          categoria_nota{
+            data{
+              attributes{
+                Titulo
+                slug
+              }
+            }
+          }
+          autor{
+            data{
+              attributes{
+                Nombre
+                slug
+                Foto{
+                  data{
+                    attributes{
+                        url
+                        width
+                        height
+                    }
+                  }
+                }
+              }
+            }
+          }
+          tags{
+            data{
+              attributes{
+                Tag
+                slug
+              }
+            }
+          }
+        }
+      }
+    }
+  } 
+`;
+const GET_PODCASTS_SLUGS = _apollo_client__WEBPACK_IMPORTED_MODULE_0__.gql`
+    query getPodcastSlugs{
+      podcasts(pagination: {start: 0, limit:-1}, sort: "updatedAt:DESC") {
+        data{
+          id
+          attributes{
+            slug
+          }
+        }
+      }
+  }`;
+const GET_PODCAST = _apollo_client__WEBPACK_IMPORTED_MODULE_0__.gql`
+  query getPodcast($slug: String!) {  
+    podcasts(filters: {slug: {eq: $slug}}) {
+      data {
+        id
+        attributes{
+          Titulo
+          Cuerpo
+          Duracion
+          slug
+          Link
+          publishedAt
+          updatedAt
+          ImagenDestacada{
+            data{
+              attributes{
+                  url
+                  width
+                  height
+              }
+            }
+          }
+          categoria_podcast{
+            data{
+              attributes{
+                Titulo
+                slug
+              }
+            }
+          }
+          autor{
+            data{
+              attributes{
+                Nombre
+                slug
+                Foto{
+                  data{
+                    attributes{
+                        url
+                        width
+                        height
+                    }
+                  }
+                }
+              }
+            }
+          }
+          tags{
+            data{
+              attributes{
+                Tag
+                slug
+              }
+            }
+          }
+        }
+      }
+    }
+  } 
+`;
+const GET_SECTION_SLUGS = _apollo_client__WEBPACK_IMPORTED_MODULE_0__.gql`
+    query getSectionSlugs{
+      categoriaNotas(pagination: {start: 0, limit:-1}, sort: "updatedAt:DESC") {
+        data{
+          id
+          attributes{
+            slug
+          }
+        }
+      }
+}`;
+const GET_SECTION_ARTICLES = _apollo_client__WEBPACK_IMPORTED_MODULE_0__.gql`
+query getSectionArticles($slug: String!){
+  categoriaNotas(filters: {slug: {eq: $slug}}) {
+    data {
+        attributes{
+          Titulo
+          slug
+          notas{
+            data{
+              attributes{
+                Titulo
+                slug
+                DescripcionCorta
+                Cuerpo
+                ImagenDestacada{
+                  data{
+                    attributes{
+                      url
+                      width
+                      height
+                    }
+                  }
+                }
+                categoria_nota{
+                  data{
+                    attributes{
+                      Titulo
+                      slug
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+    }
+  }
+}`;
+const GET_PROGRAMS_SLUGS = _apollo_client__WEBPACK_IMPORTED_MODULE_0__.gql`
+    query getProgramSlugs{
+      categoriaPodcasts(pagination: {start: 0, limit:-1}, sort: "updatedAt:DESC") {
+        data{
+          id
+          attributes{
+            slug
+          }
+        }
+      }
+}`;
+const GET_PROGRAM_PODCASTS = _apollo_client__WEBPACK_IMPORTED_MODULE_0__.gql`
+query getProgramPodcasts($slug: String!){
+  categoriaPodcasts(filters: {slug: {eq: $slug}}) {
+    data {
+        attributes{
+          Titulo
+          slug
+          podcasts{
+            data{
+              attributes{
+                Titulo
+                slug
+                DescripcionCorta
+                Link
+                Duracion
+                ImagenDestacada{
+                  data{
+                    attributes{
+                      url
+                      width
+                      height
+                    }
+                  }
+                }
+                categoria_podcast{
+                  data{
+                    attributes{
+                      Titulo
+                      slug
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+    }
+  }
+}`;
+const GET_AUTORS = _apollo_client__WEBPACK_IMPORTED_MODULE_0__.gql`
+  query getAutors{
+    autors{
+      data{
+        attributes{
+          Nombre
+          Descripcion
+          slug
+          Foto{
+            data{
+              attributes{
+                  url
+                  width
+                  height
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+`;
+const GET_TAGS_SLUGS = _apollo_client__WEBPACK_IMPORTED_MODULE_0__.gql`
+    query getTagsSlugs{
+      tags(pagination: {start: 0, limit:-1}, sort: "updatedAt:DESC") {
+        data{
+          id
+          attributes{
+            slug
+          }
+        }
+      }
+}`;
+const GET_TAG_POSTS = _apollo_client__WEBPACK_IMPORTED_MODULE_0__.gql`
+query getTagsPosts($slug: String!) {
+  tags( filters: { slug: { eq: $slug } }) {
+    data {
+      attributes {
+        Tag
+        slug
+        notas (sort: "createdAt:desc"){
+          data {
+            attributes {
+              Titulo
+              slug
+              DescripcionCorta
+              Cuerpo
+              createdAt
+              ImagenDestacada {
+                data {
+                  attributes {
+                    url
+                    width
+                    height
+                  }
+                }
+              }
+            }
+          }
+        }
+        podcasts (sort: "createdAt:desc"){
+          data {
+            attributes {
+              Titulo
+              slug
+              DescripcionCorta
+              Link
+              Duracion
+              createdAt
+              ImagenDestacada {
+                data {
+                  attributes {
+                    url
+                    width
+                    height
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+`;
+const GET_AUTORS_SLUGS = _apollo_client__WEBPACK_IMPORTED_MODULE_0__.gql`
+      query getAutoresSlugs{
+        autors{
+          data{
+            id
+            attributes{
+              slug
+            }
+          }
+        }
+      }`;
+const GET_AUTOR_POSTS = _apollo_client__WEBPACK_IMPORTED_MODULE_0__.gql`
+query getAutorPosts($slug: String!) {
+  autors( filters: { slug: { eq: $slug } }) {
+    data {
+      attributes {
+        Nombre
+        Descripcion
+        slug
+        Foto{
+          data{
+            attributes{
+                url
+                width
+                height
+            }
+          }
+        }
+        slug
+        notas (sort: "createdAt:desc"){
+          data {
+            attributes {
+              Titulo
+              slug
+              DescripcionCorta
+              Cuerpo
+              createdAt
+              ImagenDestacada {
+                data {
+                  attributes {
+                    url
+                    width
+                    height
+                  }
+                }
+              }
+            }
+          }
+        }
+        podcasts (sort: "createdAt:desc"){
+          data {
+            attributes {
+              Titulo
+              slug
+              DescripcionCorta
+              Link
+              Duracion
+              createdAt
+              ImagenDestacada {
+                data {
+                  attributes {
+                    url
+                    width
+                    height
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+`;
+const GET_PLAYLISTS = _apollo_client__WEBPACK_IMPORTED_MODULE_0__.gql`
+query getPlaylists{
+  playlists(pagination: {start: 0, limit:4}, sort: "updatedAt:DESC") {
+    data{
+      id
+      attributes{
+      	Titulo
+        DescripcionCorta
+        slug
+        Link
+        publishedAt
+        Imagen{
+          data{
+            attributes{
+                url
+            }
+          }
+        }
+      }
+    }
+  }
+}`;
+
+
+
+/***/ })
+
+};
+;
