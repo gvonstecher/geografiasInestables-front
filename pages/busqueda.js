@@ -6,10 +6,10 @@ import { useState, useEffect } from 'react';
 import { MeiliSearch } from 'meilisearch';
 import React from 'react'
 
-import Layout from '@/components/Layout';
-import NotaBusqueda from '@/components/notaBusqueda';
-import PodcastBusqueda from '@/components/podcastBusqueda';
-import AutorDestacado from '@/components/autorDestacado';
+import Layout from '@/components/layout/Layout';
+import NotaBusqueda from '@/components/notas/notaBusqueda';
+import PodcastBusqueda from '@/components/podcast/podcastBusqueda';
+import AutorDestacado from '@/components/autor/autorDestacado';
 
 const backendUrl = process.env.STRAPIBASEURL;
 
@@ -109,16 +109,16 @@ export default function Search({backendUrl, onLoadPlayer}) {
   return (
     <Layout>
       	<section id='search' className='grid grid-cols-3 gap-8 font-martel'>
-			<div className='col-span-3 bg-white rounded-lg p-12 flex drop-shadow-md items-stretch font-work'>
+			<div className='col-span-3 bg-white dark:bg-black  rounded-lg p-5 md:p-12  flex drop-shadow-md items-stretch font-work'>
 				<input
 					type="text"
-					className='grow '
+					className='grow text-black'
 					value={query}
 					onChange={(e) => setQuery(e.target.value)}
 					placeholder="Buscar..."
 				/>
 				<select 
-					className='ms-4 pr-10' 
+					className='ms-4 pr-10 text-black' 
 					onChange={(e) => setFilter(e.target.value)}
 					value="all"
 					>
@@ -127,7 +127,7 @@ export default function Search({backendUrl, onLoadPlayer}) {
 						<option value="podcasts">Podcasts</option>
 						<option value="autores">Autores</option>
 				</select> 
-				<button className='ms-4 bg-dark-green text-white px-4 font-bold'>
+				<button className='ms-4 bg-dark-verde text-white px-4 font-bold'>
 					<i><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-5 w-5"><path fillRule="evenodd" d="M9 3.5a5.5 5.5 0 100 11 5.5 5.5 0 000-11zM2 9a7 7 0 1112.452 4.391l3.328 3.329a.75.75 0 11-1.06 1.06l-3.329-3.328A7 7 0 012 9z" clipRule="evenodd"></path></svg></i>
 				</button>
 			</div>
@@ -166,7 +166,7 @@ export default function Search({backendUrl, onLoadPlayer}) {
                   )
               default: 
                   return (
-					<div className='col-span-3 bg-white rounded-lg p-12 flex drop-shadow-md' key={result._meilisearch_id}>
+					<div className='col-span-3 bg-white dark:bg-black dark:text-white rounded-lg p-5 md:p-12 flex drop-shadow-md' key={result._meilisearch_id}>
 						<AutorDestacado 
 							key={result._meilisearch_id} 
 							nombre={result.Nombre}

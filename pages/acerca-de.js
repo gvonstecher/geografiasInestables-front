@@ -2,8 +2,8 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link';
 
-import Layout from '@/components/Layout';
-import AutorDestacado from '@/components/autorDestacado';
+import Layout from '@/components/layout/Layout';
+import AutorDestacado from '@/components/autor/autorDestacado';
 import { ApolloClient, InMemoryCache } from '@apollo/client'
 import { GET_AUTORS} from '@/graphql/queries';
 
@@ -18,12 +18,12 @@ export default function AcercaDe({acercaDe, autores,backendUrl}) {
     return (
         <>
             <Layout>
-                <div className="bg-white rounded-lg px-20 py-12 drop-shadow-md">
+                <div className="bg-white rounded-lg p-5 md:px-20 md:py-12 drop-shadow-md">
                     <h3 className='text-2xl'>Acerca de</h3>
                     <h2 className='text-5xl font-oldStandard mb-4'>Geografías Inestables</h2>
-                    <div className='cuerpo border-b border-dark-green pb-5 mb-5 text-xl text-justify'>
-                        {acercaDe}
-                    </div>
+                    <div className='cuerpo border-b border-dark-green pb-5 mb-5 text-xl text-justify'
+                    dangerouslySetInnerHTML={{__html:acercaDe}}></div>
+                    <div className=' divide-y divid-solid divide-green'>
                         {autores.map((autor, i) => {
                             return (
                                 <>
@@ -39,6 +39,7 @@ export default function AcercaDe({acercaDe, autores,backendUrl}) {
                                 
                             )
                         })}  
+                    </div>
                 </div>
             </Layout>
         </>
@@ -46,7 +47,7 @@ export default function AcercaDe({acercaDe, autores,backendUrl}) {
 }
 
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
     const data = await fetch(backendUrl+'/api/acerca-de');
     const acercaDe = await data.json();
     
@@ -61,6 +62,7 @@ export async function getServerSideProps() {
             acercaDe : acercaDe.data.attributes.Cuerpo,
             autores: dataAutores.data.autors.data,
             backendUrl: backendUrl
-        }
+        },
+        revalidate: 60,
     }
   }

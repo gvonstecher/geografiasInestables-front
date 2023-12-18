@@ -4,9 +4,9 @@ import Link from 'next/link';
 
 import { getApolloClient } from '@/lib/apollo-client';
 import { GET_TAGS_SLUGS, GET_TAG_POSTS} from '../../graphql/queries';
-import Layout from '@/components/Layout';
-import NotaDestacada from '@/components/notaDestacada';
-import PodcastDestacado from '@/components/podcastDestacado';
+import Layout from '@/components/layout/Layout';
+import NotaDestacada from '@/components/notas/notaDestacada';
+import PodcastDestacado from '@/components/podcast/podcastDestacado';
 
 
 const client = getApolloClient(process.env.STRAPIGRAPHQLURL);
